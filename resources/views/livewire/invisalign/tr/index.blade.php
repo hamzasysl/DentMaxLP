@@ -199,17 +199,17 @@
             </div>
 
             {{-- Sekmeler --}}
-            <div class="-mx-5 mt-10 overflow-x-auto px-5 pb-2 [scrollbar-width:none] lg:mx-0 lg:overflow-visible lg:px-0">
-                <div class="flex snap-x gap-3 lg:grid lg:grid-cols-8">
+            <div class="mt-8 lg:mt-10">
+                <div class="grid grid-cols-4 gap-2 sm:gap-3 lg:grid-cols-8">
                     @foreach($caseItems as $i => $case)
                         <button type="button" @click="select({{ $i }})"
                                 :class="active === {{ $i }}
                                     ? 'bg-white text-brand-800 ring-2 ring-brand-600 shadow-[0_16px_34px_-18px_rgba(15,33,71,.45)] -translate-y-0.5'
                                     : 'bg-ivory text-main-700 ring-1 ring-main-200/70 hover:bg-white hover:ring-brand-300'"
-                                class="flex w-36 shrink-0 snap-start cursor-pointer flex-col items-center rounded-2xl px-3 pt-4 pb-5 text-center transition duration-300 lg:w-auto">
-                            <span class="flex min-h-[2.5rem] items-center text-[13.5px] font-normal leading-tight">{{ $case['title'] }}</span>
+                                class="flex min-w-0 cursor-pointer flex-col items-center rounded-xl px-1.5 pt-2.5 pb-3 text-center transition duration-300 sm:rounded-2xl sm:px-3 sm:pt-4 sm:pb-5">
+                            <span class="flex min-h-[2.4rem] items-center text-[10.5px] leading-tight font-normal break-words hyphens-auto sm:min-h-[2.5rem] sm:text-[13.5px]">{{ $case['title'] }}</span>
                             <span aria-hidden="true"
-                                  :class="active === {{ $i }} ? 'text-brand-700' : 'text-main-600'" class="mt-3 block aspect-[2.4] w-full bg-current transition-colors"
+                                  :class="active === {{ $i }} ? 'text-brand-700' : 'text-main-600'" class="mt-2 block aspect-[2.4] w-full bg-current transition-colors sm:mt-3"
                                   style="-webkit-mask: url('{{ asset('img/invisalign/bite/' . $case['key'] . '.svg') }}') center / contain no-repeat; mask: url('{{ asset('img/invisalign/bite/' . $case['key'] . '.svg') }}') center / contain no-repeat;"></span>
                         </button>
                     @endforeach
@@ -527,23 +527,23 @@
     <section id="hekim" class="isolate relative overflow-clip bg-ivory py-16 lg:py-24">
         <x-mark-watermark class="-right-28 bottom-8 h-[420px]" />
         <div class="mx-auto grid max-w-site items-center gap-12 px-5 lg:grid-cols-[1fr_1fr] lg:items-stretch lg:gap-16 lg:px-8">
-            <div data-reveal class="relative mx-auto w-full max-w-sm lg:max-w-none">
+            <div data-reveal class="relative -mx-1 w-auto sm:mx-auto sm:w-full sm:max-w-md lg:max-w-none">
                 <div aria-hidden="true" class="absolute -inset-6 rounded-[40px] bg-brand-200/40 blur-3xl"></div>
                 <div class="relative overflow-hidden rounded-[30px] bg-white shadow-[0_40px_80px_-50px_rgba(15,33,71,.55)] ring-1 ring-main-200/80 lg:h-full lg:min-h-[560px]">
                     <img src="{{ asset('img/lp/invisalign/dr-fatih-kahraman.webp') }}" alt="{{ $doctor['name'] }}" loading="lazy"
-                         width="960" height="1240" class="aspect-[960/1020] h-auto w-full object-cover object-top lg:absolute lg:inset-0 lg:aspect-auto lg:h-full">
+                         width="960" height="1240" class="aspect-[4/5] h-auto w-full object-cover object-[50%_8%] sm:aspect-[960/1020] sm:object-top lg:absolute lg:inset-0 lg:aspect-auto lg:h-full">
                     {{-- Üyelikler ve sertifikalar --}}
                     <div class="absolute inset-x-0 bottom-0">
                         <div aria-hidden="true" class="h-10 bg-gradient-to-t from-white/95 to-transparent"></div>
-                        <ul class="flex flex-wrap items-center justify-center gap-x-5 gap-y-3 bg-white/95 px-5 pt-1 pb-5 backdrop-blur-sm lg:gap-x-6">
+                        <ul class="flex flex-nowrap items-center justify-between gap-x-2 bg-white/95 px-3 pt-1 pb-4 backdrop-blur-sm sm:justify-center sm:gap-x-5 sm:px-5 sm:pb-5 lg:gap-x-6">
                             @foreach([
-                                ['aao',                  'American Association of Orthodontists üyesi', 'h-[22px] lg:h-[26px]'],
-                                ['invisalign-preferred', 'Invisalign Preferred Provider',               'h-[19px] lg:h-[22px]'],
-                                ['wfo',                  'World Federation of Orthodontists',           'h-[27px] lg:h-[32px]'],
-                                ['dsd-clinic',           'Digital Smile Design Clinic',                 'h-[20px] lg:h-[24px]'],
-                                ['eos',                  'European Orthodontic Society üyesi',          'h-[22px] lg:h-[26px]'],
+                                ['aao',                  'American Association of Orthodontists üyesi', 'h-[15px] sm:h-[22px] lg:h-[26px]'],
+                                ['invisalign-preferred', 'Invisalign Preferred Provider',               'h-[12px] sm:h-[19px] lg:h-[22px]'],
+                                ['wfo',                  'World Federation of Orthodontists',           'h-[18px] sm:h-[27px] lg:h-[32px]'],
+                                ['dsd-clinic',           'Digital Smile Design Clinic',                 'h-[13px] sm:h-[20px] lg:h-[24px]'],
+                                ['eos',                  'European Orthodontic Society üyesi',          'h-[15px] sm:h-[22px] lg:h-[26px]'],
                             ] as [$logo, $label, $h])
-                                <li><img src="{{ asset('img/lp/invisalign/memberships/' . $logo . '.webp') }}" alt="{{ $label }}" title="{{ $label }}" loading="lazy" class="{{ $h }} w-auto"></li>
+                                <li class="shrink-0"><img src="{{ asset('img/lp/invisalign/memberships/' . $logo . '.webp') }}" alt="{{ $label }}" title="{{ $label }}" loading="lazy" class="{{ $h }} w-auto max-w-none"></li>
                             @endforeach
                         </ul>
                     </div>

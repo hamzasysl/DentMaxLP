@@ -41,7 +41,7 @@
                 </h1>
 
                 <p data-reveal style="--d:160ms" class="mt-6 max-w-[34rem] text-[16px] leading-[1.75] text-white/70">
-                    Dijital 3D planlama ile, neredeyse görünmez ve çıkarılabilir şeffaf plaklarla kişiye özel ortodonti tedavisi.
+                    Dişleriniz 3D taramayla planlanır, size özel şeffaf plaklarla tel takmadan düzelir.
                 </p>
 
 
@@ -134,10 +134,10 @@
                 </h2>
                 <span data-reveal style="--d:90ms" class="accent-line mt-6"></span>
                 <p data-reveal style="--d:120ms" class="mt-6 text-[16.5px] leading-relaxed text-main-500">
-                    Invisalign; dişlerinizin dijital taramasıyla planlanan, size özel üretilmiş bir dizi şeffaf plaktan oluşur. Her yeni plak dişlerinizi planlanan konuma doğru milimetrik olarak hareket ettirir.
+                    Invisalign, dişlerinizin dijital taramasına göre size özel üretilen şeffaf plaklardan oluşur. Her yeni plak dişlerinizi hedeflenen konuma biraz daha yaklaştırır.
                 </p>
                 <p data-reveal style="--d:160ms" class="mt-4 text-[16.5px] font-normal leading-relaxed text-main-800">
-                    Tel ve braket yok; plakları yemek ve temizlik sırasında çıkarır, ardından tekrar takarsınız.
+                    Tel ve braket kullanılmaz. Plakları yemek yerken ve dişlerinizi fırçalarken çıkarıp sonra tekrar takarsınız.
                 </p>
 
                 <dl data-reveal style="--d:200ms" class="mt-8 grid max-w-md grid-cols-2 gap-3">
@@ -194,7 +194,7 @@
                 <p class="eyebrow text-brand-700">Tedavi edilen durumlar</p>
                 <h2 class="section-title mt-3">Gülüşünüze En Çok Benzeyen Durumu Seçin</h2>
                 <p class="mt-4 text-[16px] leading-relaxed text-main-500">
-                    Şeffaf plaklar pek çok ortodontik problemi tel takmadan düzeltebilir. Bir duruma dokunun, dişlerin nasıl hareket ettiğini izleyin.
+                    Birçok ortodontik sorun şeffaf plaklarla tel takmadan düzeltilebilir. Size benzeyen duruma dokunun, dişlerin nasıl hareket ettiğini izleyin.
                 </p>
             </div>
 
@@ -313,7 +313,7 @@
                     <span class="block font-thin">Günlük Hayatınıza</span>
                     <span class="block font-light">Uyum Sağlayan Bir Tedavi</span>
                 </h2>
-                <p class="mx-auto mt-5 max-w-md text-[15px] leading-relaxed text-main-500">Yemek, konuşma ve sosyal hayatınızda hiçbir şey değişmeden, fark edilmeden tedavi olun.</p>
+                <p class="mx-auto mt-5 max-w-md text-[15px] leading-relaxed text-main-500">Yemek yerken, konuşurken ya da fotoğraf çekilirken tedavinizi düşünmenize gerek kalmaz.</p>
             </div>
 
             <div class="mt-14 grid grid-cols-1 items-center gap-12 lg:mt-16 lg:grid-cols-[1fr_minmax(0,380px)_1fr] lg:gap-14">
@@ -403,10 +403,10 @@
                 <span data-reveal style="--d:100ms" class="mt-5 block h-px w-full max-w-[420px] bg-gradient-to-r from-[#c9973f] via-[#c9973f]/60 to-transparent"></span>
 
                 <p data-reveal style="--d:140ms" class="mt-8 text-[16.5px] leading-[1.8] text-main-700">
-                    Kahraman Ortodonti’de her tedavi, dişlerinizin üç boyutlu dijital taramasıyla başlar. Yrd. Doç. Dr. Fatih Kahraman plaklarınızın her aşamasını önceden planlar; dişlerinizin hangi adımda nasıl hareket edeceğini tedaviye başlamadan görürsünüz.
+                    Kahraman Ortodonti’de her tedavi, dişlerinizin üç boyutlu dijital taramasıyla başlar. Yrd. Doç. Dr. Fatih Kahraman plaklarınızın her aşamasını önceden planlar. Dişlerinizin hangi aşamada nasıl hareket edeceğini tedaviye başlamadan birlikte inceleriz.
                 </p>
                 <p data-reveal style="--d:180ms" class="mt-5 text-[16.5px] leading-[1.8] text-main-700">
-                    Size özel üretilen şeffaf plaklarla günlük hayatınızdan ödün vermeden, kontrollü ve konforlu bir şekilde hedeflediğiniz gülüşe ulaşırsınız.
+                    Plaklarınız bu plana göre üretilir. Kontrollerde ilerlemeyi birlikte takip eder, gerekirse planı güncelleriz.
                 </p>
 
                 <button data-reveal style="--d:220ms" type="button" onclick="Livewire.dispatch('open-book-consultation')" class="{{ $btnAccent }} mt-9">
@@ -430,7 +430,7 @@
                 <p class="eyebrow text-brand-700">Neden <span lang="en">Invisalign</span>?</p>
                 <h2 class="section-title mt-3">Telli Tedavi İle Karşılaştırın</h2>
                 <p class="mt-5 text-[16px] leading-relaxed text-main-500">
-                    Aynı hedefe daha konforlu ve fark edilmeden ulaşmak mümkün. Uygun yöntem muayenede birlikte belirlenir.
+                    İki yöntem de dişleri düzeltir; fark günlük hayatta ortaya çıkar. Size hangisinin uygun olduğuna muayenede birlikte karar veririz.
                 </p>
                 <button type="button" onclick="Livewire.dispatch('open-book-consultation')" class="{{ $btnDark }} mt-8">
                     İletişime geç <i class="fa-solid fa-arrow-right text-[12px]"></i>
@@ -471,7 +471,7 @@
                 </span>
                 <h2 class="mt-6 text-[clamp(32px,4vw,52px)] leading-[1.1] tracking-[-0.02em] font-light text-brand-900">Ücretsiz <span class="font-semibold">Diş Analizi</span></h2>
                 <p class="mx-auto mt-5 max-w-xl text-[16px] leading-relaxed text-main-500">
-                    Aşağıdaki formu doldurun; sizi arayıp sorularınızı yanıtlayalım ve size uygun bir randevu saati belirleyelim.
+                    Birkaç soruyu yanıtlayın, sizi arayıp sorularınızı cevaplayalım ve uygun bir randevu saati belirleyelim.
                 </p>
             </div>
 
@@ -564,7 +564,7 @@
                 <p data-reveal style="--d:120ms" class="mt-2 text-[15.5px] text-brand-700">Ortodonti Uzmanı <span class="text-main-300">·</span> <span class="text-main-500">DDS, PhD</span></p>
 
                 <p data-reveal style="--d:160ms" class="mt-6 text-[16px] leading-relaxed text-main-600">
-                    6 yıllık ortodonti uzmanlık eğitimini tamamlamış, Sağlık Bakanlığı onaylı ortodonti uzmanıdır. 15 yılı aşkın deneyimiyle İstanbul ve Balıkesir’de şeffaf plak, dijital ortodonti ve ameliyatsız çene genişletme tedavilerini bizzat yürütür; yurt içi ve yurt dışı kongrelerde konuşmacı olarak yer alır.
+                    6 yıllık ortodonti uzmanlık eğitimini tamamlamış, Sağlık Bakanlığı onaylı bir ortodonti uzmanıdır. 15 yılı aşkın deneyimiyle İstanbul ve Balıkesir’de şeffaf plak, dijital ortodonti ve ameliyatsız çene genişletme tedavilerini bizzat yürütür. Yurt içi ve yurt dışı kongrelerde konuşmacı olarak yer alır.
                 </p>
 
                 {{-- Rakamlar --}}
@@ -697,9 +697,9 @@
         <div class="mx-auto max-w-site px-5 lg:px-8">
             <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
                 <div data-reveal>
-                    <p class="eyebrow">Yardım merkezi</p>
+                    <p class="eyebrow">Merak edilenler</p>
                     <h2 class="section-title mt-4">Sıkça Sorulan Sorular</h2>
-                    <p class="mt-3 text-[16px] text-main-500">Invisalign tedavisi hakkında merak ettikleriniz.</p>
+                    <p class="mt-3 text-[16px] text-main-500">Invisalign tedavisi hakkında en sık sorulan sorular.</p>
                 </div>
                 <span data-reveal class="inline-flex items-center gap-2 self-start rounded-full border border-main-200 bg-white px-5 py-2.5 text-[13.5px] text-main-600 shadow-[0_10px_24px_-18px_rgba(17,17,20,.3)] lg:self-end">
                     <span class="h-2 w-2 rounded-full bg-emerald-500"></span> Ortalama yanıt süresi: <strong class="font-semibold text-main-900">30 dakika</strong>
@@ -742,4 +742,6 @@
             </div>
         </div>
     </section>
+    {{-- Google için yapılandırılmış veri (klinik, hekim, şubeler, SSS) --}}
+    @include('partials.schema', ['faqs' => $faqItems])
 </div>

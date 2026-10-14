@@ -48,11 +48,14 @@
     {{-- Open Graph --}}
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="{{ $siteName }}">
-    <meta property="og:locale" content="{{ $locale }}">
+    <meta property="og:locale" content="{{ $locale === 'tr' ? 'tr_TR' : $locale }}">
     <meta property="og:title" content="{{ $fullTitle }}">
     <meta property="og:description" content="{{ $pageDesc }}">
     <meta property="og:url" content="{{ $canonical }}">
     <meta property="og:image" content="{{ $ogImage }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="{{ $siteName }} – Invisalign şeffaf plak tedavisi">
 
     {{-- Twitter (kalsın; bazı mecralar okuyor, zarar vermez) --}}
     <meta name="twitter:card" content="summary_large_image">
@@ -61,6 +64,8 @@
     <meta name="twitter:image" content="{{ $ogImage }}">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#162b57">
+    <meta name="author" content="{{ config('brand.doctor.name') }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     {{-- Laravel + Vite + Tailwind --}}

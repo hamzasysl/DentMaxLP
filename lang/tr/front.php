@@ -12,7 +12,7 @@ return [
 
     /*  ------------- FOOTER  ---------------- */
     'footer' => [
-        'footer-text'    => 'Kahraman Ortodonti; Yrd. Doç. Dr. Fatih Kahraman’ın İstanbul ve Balıkesir’deki muayenelerinde şeffaf plak (Invisalign) ve ortodonti tedavileri sunar.',
+        'footer-text'    => 'Yrd. Doç. Dr. Fatih Kahraman, İstanbul ve Balıkesir’deki muayenehanelerinde Invisalign şeffaf plak ve ortodonti tedavileri uygular.',
         'copyright'    => 'Tüm Hakları Saklıdır.',
 
         'copyright-privacy-policy' => 'Gizlilik Politikası',
@@ -141,7 +141,7 @@ return [
     'ty' => [
         'thanks'     => 'Teşekkürler!',
         'successfully-submitted'     => 'Formunuz başarıyla iletildi',
-        'successfully-message'     => 'Koordinatör ekibimiz en kısa sürede sizinle iletişime geçecektir. Genellikle 30 Dakika içinde dönüş sağlıyoruz.',
+        'successfully-message'     => 'Ekibimiz en kısa sürede sizi arayacak. Mesai saatlerinde genellikle 30 dakika içinde dönüş yapıyoruz.',
         'details'     => 'Detaylar',
         'visible-details'     => 'Detaylar henüz görünmüyor. Form üzerinden geldiğinizde bilgiler burada listelenecek.',
         'application-summary'     => 'Başvuru Özeti',

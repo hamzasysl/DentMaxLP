@@ -1,2 +1,4 @@
 User-agent: *
-Disallow:
+Disallow: /tesekkurler
+
+Sitemap: https://kahraman.mezbilisim.dev/sitemap.xml

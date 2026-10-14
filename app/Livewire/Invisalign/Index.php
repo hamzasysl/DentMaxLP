@@ -106,7 +106,7 @@ class Index extends Base
                 'title' => 'Genellikle daha düzgün dişler',
                 'lead'  => 'Dişler genel olarak düzgün olsa da küçük kaymalar, dönmeler veya hafif çapraşıklıklar bulunur.',
                 'risks' => ['Küçük kaymalar zamanla artabilir', 'Gülüş simetrisini bozabilir', 'Eski ortodonti tedavisi sonrası nüks görülebilir'],
-                'fix'   => 'Kısa süreli şeffaf plak tedavisiyle küçük düzensizlikler hızlıca giderilir.',
+                'fix'   => 'Küçük düzensizlikler genellikle kısa süreli bir plak tedavisiyle düzeltilir.',
                 'video' => "{$cdn}/6KyoPWSRmRuFrkSokhJYdf/0c287d2508259627ca39b6c7677aaf96/video-resources-straighter-teeth-timelapse.mp4",
             ],
         ];
@@ -120,11 +120,11 @@ class Index extends Base
 
         ## ------- AVANTAJLAR -------- ##
         $this->benefits = [
-            ['icon' => 'fa-eye-slash',      'img' => 'hero', 'title' => 'Neredeyse görünmez',  'text' => 'Şeffaf plaklar dişlerinizin üzerinde fark edilmez; iş görüşmesinde de düğün fotoğrafında da rahatsınız.'],
-            ['icon' => 'fa-hand-sparkles',  'img' => 'aligner-hand', 'title' => 'Çıkarılabilir',       'text' => 'Yemek yerken ve dişlerinizi fırçalarken plakları çıkarırsınız. Yiyecek kısıtlaması yoktur.'],
-            ['icon' => 'fa-feather',        'img' => 'aligner-putting', 'title' => 'Konforlu',            'text' => 'Pürüzsüz yüzey; tel batması ve braket kaynaklı yara oluşmaz.'],
-            ['icon' => 'fa-cube',           'img' => 'scan-screen', 'title' => 'Öngörülebilir',       'text' => 'Dijital planlama ile dişlerinizin her adımda nasıl hareket edeceğini önceden görürsünüz.'],
-            ['icon' => 'fa-soap',           'img' => 'aligner-case', 'title' => 'Hijyenik',            'text' => 'Diş fırçası ve diş ipi kullanımınız değişmez; diş eti sağlığınızı korumak kolaylaşır.'],
+            ['icon' => 'fa-eye-slash',      'img' => 'hero', 'title' => 'Neredeyse görünmez',  'text' => 'Plaklar şeffaf ve incedir. Konuşurken ya da gülerken çoğu kişi fark etmez.'],
+            ['icon' => 'fa-hand-sparkles',  'img' => 'aligner-hand', 'title' => 'Çıkarılabilir',       'text' => 'Yemek yerken ve dişlerinizi fırçalarken plakları çıkarırsınız. Bu yüzden yiyecek kısıtlaması yoktur.'],
+            ['icon' => 'fa-feather',        'img' => 'aligner-putting', 'title' => 'Konforlu',            'text' => 'Yüzeyi pürüzsüzdür. Tel batması ya da braketlerin açtığı yaralar olmaz.'],
+            ['icon' => 'fa-cube',           'img' => 'scan-screen', 'title' => 'Öngörülebilir',       'text' => 'Dijital planlama sayesinde dişlerinizin her aşamada nasıl hareket edeceğini tedaviye başlamadan görürsünüz.'],
+            ['icon' => 'fa-soap',           'img' => 'aligner-case', 'title' => 'Hijyenik',            'text' => 'Dişlerinizi her zamanki gibi fırçalar, diş ipi kullanırsınız. Diş etlerinizi korumak daha kolaydır.'],
             ['icon' => 'fa-calendar-check', 'img' => 'woman-white', 'title' => 'Daha az kontrol',     'text' => 'Tel ayarı olmadığı için kontrol randevuları daha seyrek ve kısadır.'],
         ];
 
@@ -163,7 +163,7 @@ class Index extends Base
             ['label' => 'Yemek & içmek',         'inv' => 'Plakları çıkarıp dilediğinizi yersiniz', 'tel' => 'Sert ve yapışkan gıdalar kısıtlı'],
             ['label' => 'Ağız hijyeni',          'inv' => 'Fırça ve diş ipi her zamanki gibi', 'tel' => 'Braket aralarını temizlemek zor'],
             ['label' => 'Konfor',                'inv' => 'Pürüzsüz plastik, tel batması yok', 'tel' => 'Tel ve braket tahrişi olabilir'],
-            ['label' => 'Sonucu önceden görme',  'inv' => '3D dijital simülasyon ile',     'tel' => 'Mümkün değil'],
+            ['label' => 'Sonucu önceden görme',  'inv' => '3D dijital simülasyon ile',     'tel' => 'Genellikle yapılmaz'],
             ['label' => 'Kontrol randevuları',   'inv' => 'Daha seyrek',                    'tel' => 'Daha sık, tel ayarı gerekir'],
         ];
 
@@ -198,23 +198,23 @@ class Index extends Base
             ['q' => 'Invisalign tedavisi ne kadar sürer?',
              'a' => 'Vakanın zorluğuna göre değişmekle birlikte çoğu tedavi 6–18 ay arasında tamamlanır. Kesin süre, muayene ve 3D tarama sonrası dijital planlamada netleşir.'],
             ['q' => 'Plaklar ağrı yapar mı?',
-             'a' => 'Her yeni plakla birlikte 1–3 gün hafif bir baskı hissi olabilir; bu, dişlerin hareket ettiğini gösterir. Tel ve braket olmadığı için ağız içinde tahriş genellikle yaşanmaz.'],
+             'a' => 'Her yeni plağın ilk 1–3 gününde hafif bir baskı hissedebilirsiniz. Bu, dişlerin hareket ettiğini gösterir. Tel ve braket olmadığı için ağız içinde tahriş genellikle yaşanmaz.'],
             ['q' => 'Plaklar konuşmamı etkiler mi?',
              'a' => 'İlk birkaç gün hafif bir peltekleşme olabilir. Dil kısa sürede alışır ve konuşma normale döner.'],
             ['q' => 'Plaklarla yemek yiyebilir miyim?',
-             'a' => 'Yemek yerken plakları çıkarırsınız; bu sayede yiyecek kısıtlaması yoktur. Yemekten sonra dişlerinizi fırçalayıp plakları tekrar takmanız yeterlidir.'],
+             'a' => 'Yemek yerken plakları çıkarırsınız, bu yüzden yiyecek kısıtlaması yoktur. Yemekten sonra dişlerinizi fırçalayıp plakları tekrar takmanız yeterlidir.'],
             ['q' => 'Günde kaç saat takmam gerekiyor?',
              'a' => 'Planlanan sonuca ulaşmak için plakların günde 20–22 saat takılması gerekir. Sadece yemek ve temizlik sırasında çıkarılır.'],
             ['q' => 'Invisalign kimler için uygundur?',
-             'a' => 'Çapraşıklık, diş arası boşluk ve birçok kapanış bozukluğu olan yetişkin ve gençler için uygundur. Uygunluk; diş eti sağlığı ve vakanın durumuna göre muayenede belirlenir.'],
+             'a' => 'Çapraşıklık, diş arası boşluk ve birçok kapanış bozukluğu olan yetişkin ve gençler için uygundur. Size uygun olup olmadığı diş eti sağlığınıza ve vakanın durumuna göre muayenede belirlenir.'],
             ['q' => 'Tedavi ücreti nasıl belirlenir?',
-             'a' => 'Ücret; vakanın zorluğuna, gereken plak sayısına ve tedavi süresine göre kişiye özel belirlenir. Muayene sonrası size net bir tedavi planı ve ödeme seçenekleri sunulur.'],
+             'a' => 'Ücret vakanın zorluğuna, gereken plak sayısına ve tedavi süresine göre kişiye özel belirlenir. Muayene sonrası size net bir tedavi planı ve ödeme seçenekleri sunulur.'],
             ['q' => 'Plaklar dışarıdan fark edilir mi?',
              'a' => 'Plaklar şeffaf ve ince olduğu için konuşurken ya da gülerken çoğu zaman fark edilmez. Bazı vakalarda dişlere yapıştırılan küçük, diş renginde tutucular kullanılabilir.'],
             ['q' => 'Ne sıklıkla kontrole gelmem gerekir?',
              'a' => 'Kontroller genellikle 6–10 haftada bir planlanır. Tel ayarı olmadığı için randevular kısa sürer.'],
             ['q' => 'Tedavi bittikten sonra dişlerim eski haline döner mi?',
-             'a' => 'Sonucun korunması için tedavi sonrası pekiştirme aparatı (retainer) kullanılır. Önerilen kullanım düzenine uyulduğunda sonuç kalıcı olur.'],
+             'a' => 'Sonucun korunması için tedavi sonrası pekiştirme aparatı (retainer) kullanılır. Önerilen süre boyunca düzenli kullanıldığında dişler yeni konumlarını korur.'],
         ];
     }
 

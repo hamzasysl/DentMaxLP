@@ -12,9 +12,9 @@ $list = fn (?string $v) => array_values(array_filter(array_map('trim', explode('
 return [
 
     'mail' => [
-        'to'  => $list(env('LEAD_MAIL_TO', env('MAIL_USERNAME'))),
-        'cc'  => $list(env('LEAD_MAIL_CC', 'i.hamzasysl@gmail.com,hamza@mezbilisim.com')),
-        'bcc' => $list(env('LEAD_MAIL_BCC', 'aimlost15@gmail.com')),
+        'to'  => $list(env('LEAD_MAIL_TO', 'hamza@mezbilisim.com')),
+        'cc'  => $list(env('LEAD_MAIL_CC')),
+        'bcc' => $list(env('LEAD_MAIL_BCC')),
     ],
 
     // landing_id boşsa CRM'e gönderim yapılmaz.

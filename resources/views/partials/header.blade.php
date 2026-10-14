@@ -1,7 +1,6 @@
 @php
-    $segments = request()->segments();
-    $homeUrl  = url('/' . ($segments[0] ?? app()->getLocale()) . '/' . ($segments[1] ?? config('brand.default_lp')));
-    $isBase   = count($segments) <= 2;
+    $homeUrl  = url('/');
+    $isBase   = request()->is('/') || request()->routeIs('home');
     $anchor   = fn (string $id) => $isBase ? "#{$id}" : "{$homeUrl}#{$id}";
 
     $nav = [

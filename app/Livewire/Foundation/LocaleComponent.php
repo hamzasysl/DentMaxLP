@@ -21,11 +21,8 @@ abstract class LocaleComponent extends Component
             return;
         }
 
-        if (!in_array($lang, $this->locales, true)) {
-            abort(404);
-        }
-
-        app()->setLocale($lang);
+        // Tek dilli kurulum: URL'de dil öneki yok, varsayılan dil kullanılır
+        app()->setLocale(in_array($lang, $this->locales, true) ? $lang : config('brand.default_locale', 'tr'));
     }
 
     public function switchLocale(string $locale)

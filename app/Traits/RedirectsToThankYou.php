@@ -99,16 +99,6 @@ trait RedirectsToThankYou
 
     protected function thankYouUrlFromReferer(): string
     {
-        $ref  = request()->headers->get('referer') ?? url()->previous();
-        $path = $ref ? parse_url($ref, PHP_URL_PATH) : '';
-
-        $segs = array_values(array_filter(explode('/', trim((string) $path, '/'))));
-
-        $lang = $segs[0] ?? app()->getLocale();
-        $lp   = $segs[1] ?? null;
-
-        if (!$lp) return '/' . $lang . '/thank-you';
-
-        return '/' . $lang . '/' . $lp . '/thank-you';
+        return route('thank-you', absolute: false);
     }
 }

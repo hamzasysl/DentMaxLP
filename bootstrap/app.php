@@ -12,9 +12,7 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        $middleware->prependToGroup('web', [
-            \App\Http\Middleware\LocaleMiddleware::class,
-        ]);
+        // Tek dilli LP: dil önekli URL kullanılmıyor (LocaleMiddleware devre dışı)
     })
 
     ->withExceptions(function (Exceptions $exceptions): void {

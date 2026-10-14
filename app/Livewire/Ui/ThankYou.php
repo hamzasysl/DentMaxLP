@@ -9,10 +9,9 @@ class ThankYou extends Component
 {
     public array $thankYouData = [];
 
-    public function mount(string $lang, string $lp): void
+    public function mount(): void
     {
-        // Locale set
-        app()->setLocale($lang);
+        app()->setLocale(config('brand.default_locale', 'tr'));
 
         // ✅ GEÇİCİ: tamamen açık olsun (formdan gelme şartını kapattık)
          abort_unless(session()->get('thank_you_allowed'), 404);
@@ -25,7 +24,7 @@ class ThankYou extends Component
     public function render()
     {
         // Route parametresi gelmediyse mount'tan geleni kullan (veya fallback)
-        $lp = request()->route('lp') ?? config('brand.default_lp');
+        $lp = config('brand.default_lp');
 
         $ns = Str::studly(str_replace('-', ' ', $lp));
         $indexClass = "App\\Livewire\\{$ns}\\Index";

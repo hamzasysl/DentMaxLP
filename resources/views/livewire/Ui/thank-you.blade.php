@@ -35,8 +35,7 @@
 
                         {{-- GO HOME (pill button) --}}
                         @php
-                            $segments = request()->segments();
-                            $target = '/' . ($segments[0] ?? app()->getLocale()) . '/' . ($lpSlug ?? ($segments[1] ?? config('brand.default_lp')));
+                            $target = '/';
                         @endphp
 
                         <a

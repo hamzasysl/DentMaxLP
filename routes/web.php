@@ -4,35 +4,21 @@ use Illuminate\Support\Facades\Route;
 
 use App\Livewire\Invisalign\Index as InvisalignIndex;
 use App\Livewire\Ui\ThankYou;
+
 /*
 |--------------------------------------------------------------------------
-| Lang olmayan istekleri yut (SEO / güvenlik)
+| Tek dilli, tek sayfalık LP: kök adres doğrudan Invisalign sayfası
 |--------------------------------------------------------------------------
 */
-Route::get('/{any}', function () {
-    return response('', 204);
-})->where('any', '^(?![a-zA-Z]{2}(/|$)).*');
+Route::get('/', InvisalignIndex::class)->name('home');
 
+Route::get('/tesekkurler', ThankYou::class)->name('thank-you');
 
-Route::group(['prefix' => '{lang}'], function () {
-    // /tr -> /tr/{default_lp}
-    Route::get('/', fn (string $lang) => redirect("/{$lang}/" . config('brand.default_lp')));
-
-    /*
-    |--------------------------------------------------------------------------
-    | Invisalign LP
-    |--------------------------------------------------------------------------
-    */
-    Route::prefix('invisalign')->group(function () {
-        Route::get('/', InvisalignIndex::class)->name('invisalign.index');
-    });
-
-    /*
-    |--------------------------------------------------------------------------
-    | 🔥 TEK THANK YOU (LP BAZLI – DİNAMİK)
-    |--------------------------------------------------------------------------
-    */
-    Route::get('{lp}/thank-you', ThankYou::class)
-        ->name('lp.thank-you');
-
-});
+/*
+|--------------------------------------------------------------------------
+| Eski çok dilli adresler → yeni adresler (kalıcı yönlendirme)
+|--------------------------------------------------------------------------
+*/
+Route::permanentRedirect('/tr', '/');
+Route::permanentRedirect('/tr/invisalign', '/');
+Route::permanentRedirect('/tr/invisalign/thank-you', '/tesekkurler');

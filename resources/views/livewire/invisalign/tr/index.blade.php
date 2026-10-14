@@ -410,7 +410,7 @@
                 </p>
 
                 <button data-reveal style="--d:220ms" type="button" onclick="Livewire.dispatch('open-book-consultation')" class="{{ $btnAccent }} mt-9">
-                    Ücretsiz muayene <i class="fa-solid fa-arrow-right text-[11px]"></i>
+                    Ücretsiz Muayene <i class="fa-solid fa-arrow-right text-[11px]"></i>
                 </button>
             </div>
         </div>

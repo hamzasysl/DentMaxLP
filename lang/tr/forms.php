@@ -76,7 +76,7 @@ return [
         ],
 
         // Lead formu (layout=lead)
-        'dm-kicker' => 'Ücretsiz muayene',
+        'dm-kicker' => 'Ücretsiz Muayene',
         'dm-title'  => 'Randevunuzu Oluşturalım',
         'dm-desc'   => 'Bilgilerinizi bırakın, sizi hemen arayalım.',
         'dm-topic-placeholder' => 'Seçiniz (isteğe bağlı)',

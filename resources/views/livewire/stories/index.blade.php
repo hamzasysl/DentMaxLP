@@ -45,7 +45,7 @@
 
     {{-- ============ KARTLAR ============ --}}
     <section class="bg-white py-12 lg:py-16">
-        <div class="mx-auto grid max-w-site gap-5 px-5 sm:grid-cols-2 lg:grid-cols-3 lg:px-8">
+        <div class="mx-auto grid max-w-site gap-5 px-5 sm:grid-cols-2 lg:px-8 {{ count($stories) >= 3 ? 'lg:grid-cols-3' : '' }}">
             @foreach($stories as $story)
                 @php($after = $story['photos']['after'] ?? null)
                 <a x-show="filter === 'all' || filter === '{{ $story['condition'] }}'" x-transition.opacity
@@ -77,25 +77,6 @@
                 </a>
             @endforeach
 
-            {{-- Sonda: randevu kartı (ızgarayı tamamlar) --}}
-            <div data-reveal style="--d: {{ count($stories) * 70 }}ms"
-                 class="relative isolate flex min-h-[380px] flex-col overflow-hidden rounded-[24px] bg-brand-900 p-7 text-white sm:p-8">
-                <div aria-hidden="true" class="absolute inset-0 -z-10 bg-[radial-gradient(70%_60%_at_100%_0%,rgba(139,106,77,.45),transparent_70%)]"></div>
-                <x-logo-mark class="pointer-events-none absolute -right-14 -bottom-16 -z-10 h-[260px] w-auto" style="--logo-ink:#fff; --logo-accent:#fff; opacity:.06;" />
-                <p class="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#e2b979]"><span class="h-px w-6 bg-[#e2b979]"></span>Sıradaki hikaye</p>
-                <h2 class="mt-4 text-[28px] leading-[1.12] tracking-[-0.015em]"><span class="font-light">Sizin Hikayeniz</span> <span class="block font-semibold">Burada Başlasın</span></h2>
-                <p class="mt-3 text-[14.5px] leading-relaxed text-white/65">Ücretsiz muayenede dişlerinizi inceleyelim, size uygun tedavi planını ve süresini birlikte konuşalım.</p>
-                <div class="mt-auto flex flex-wrap gap-2.5 pt-8">
-                    <button type="button" onclick="Livewire.dispatch('open-book-consultation')"
-                            class="inline-flex cursor-pointer items-center gap-2 rounded-full bg-white px-5 py-3 text-[13.5px] font-semibold text-brand-900 transition hover:bg-brand-50">
-                        <i class="fa-regular fa-calendar-check text-[13px] text-brand-700"></i> Ücretsiz Muayene
-                    </button>
-                    <a href="{{ \App\Support\WhatsApp::url() }}" target="_blank" rel="noopener"
-                       class="inline-flex items-center gap-2 rounded-full border border-white/25 px-5 py-3 text-[13.5px] font-medium text-white transition hover:border-white/50 hover:bg-white/5">
-                        <i class="fa-brands fa-whatsapp text-[15px]"></i> WhatsApp
-                    </a>
-                </div>
-            </div>
         </div>
     </section>
 </div>

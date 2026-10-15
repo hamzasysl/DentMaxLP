@@ -16,9 +16,9 @@
             </nav>
 
             <div data-reveal class="mt-8 max-w-3xl lg:mt-10">
-                <p class="flex items-center gap-3 text-[11.5px] font-medium uppercase tracking-[0.3em] text-brand-600"><span class="h-px w-8 bg-[#c9973f]"></span>Hasta hikayeleri</p>
+                <p class="flex items-center gap-3 text-[11.5px] font-medium uppercase tracking-[0.3em] text-brand-600"><span class="h-px w-8 bg-[#c9973f]"></span>Başlangıçtan sonuca</p>
                 <h1 class="mt-4 text-[clamp(36px,4.6vw,60px)] leading-[1.06] tracking-[-0.025em] text-brand-900">
-                    <span class="font-light">Başlangıçtan</span> <span class="font-semibold">Sonuca</span>
+                    <span class="font-light">Hasta</span> <span class="font-semibold">Hikayeleri</span>
                 </h1>
                 <p class="mt-5 max-w-2xl text-[17px] leading-relaxed text-main-600">
                     Her hastamızın tedavisi farklı başlar. Hangi durumla geldiklerini, sürecin nasıl ilerlediğini ve sonucu kendi hikayelerinden okuyun.

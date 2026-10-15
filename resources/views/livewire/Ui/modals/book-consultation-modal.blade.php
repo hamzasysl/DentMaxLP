@@ -4,12 +4,12 @@
         <div class="exit-overlay fixed inset-0 z-[100000] flex items-center justify-center bg-brand-900/55 p-3 backdrop-blur-sm sm:p-6"
              wire:click="closeModal">
 
-            <div class="exit-panel relative max-h-[calc(100dvh-1.5rem)] w-full max-w-[540px] overflow-y-auto overscroll-contain rounded-[24px] bg-white shadow-[0_40px_100px_-30px_rgba(22,43,87,.65)] sm:max-h-[calc(100dvh-3rem)] sm:rounded-[28px]"
+            <div class="exit-panel relative max-h-[calc(100dvh-1.5rem)] w-full max-w-[540px] overflow-y-auto overscroll-contain rounded-[24px] bg-white shadow-[0_40px_100px_-30px_rgba(38,28,22,.65)] sm:max-h-[calc(100dvh-3rem)] sm:rounded-[28px]"
                  role="dialog" aria-modal="true" aria-labelledby="book-title" wire:click.stop>
 
                 {{-- Lacivert başlık --}}
                 <div class="relative isolate overflow-hidden bg-gradient-to-br from-brand-900 via-brand-800 to-brand-700 px-5 pt-5 pb-6 text-white sm:px-8 sm:pt-6 sm:pb-7">
-                    <div aria-hidden="true" class="absolute inset-0 -z-10 bg-[radial-gradient(60%_90%_at_100%_0%,rgba(148,176,226,.3),transparent_65%)]"></div>
+                    <div aria-hidden="true" class="absolute inset-0 -z-10 bg-[radial-gradient(60%_90%_at_100%_0%,rgba(198,168,134,.3),transparent_65%)]"></div>
                     <x-logo-mark class="pointer-events-none absolute -right-10 -bottom-12 -z-10 h-[200px] w-auto opacity-[.07]" style="--logo-ink:#fff; --logo-accent:#fff;" />
 
                     <div class="flex items-center justify-between">

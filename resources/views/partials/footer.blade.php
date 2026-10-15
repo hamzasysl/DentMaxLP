@@ -20,7 +20,7 @@
 <footer id="iletisim" class="relative isolate overflow-hidden bg-brand-900 text-white">
     <x-logo-mark class="pointer-events-none absolute -right-24 -bottom-16 -z-10 hidden h-[480px] w-auto select-none md:block"
                  style="--logo-ink: #ffffff; --logo-accent: #ffffff; opacity: .04;" />
-    <div aria-hidden="true" class="absolute inset-0 -z-10 bg-[radial-gradient(55%_80%_at_0%_0%,rgba(68,105,179,.35),transparent_65%),radial-gradient(45%_70%_at_100%_100%,rgba(148,176,226,.12),transparent_65%)]"></div>
+    <div aria-hidden="true" class="absolute inset-0 -z-10 bg-[radial-gradient(55%_80%_at_0%_0%,rgba(139,106,77,.35),transparent_65%),radial-gradient(45%_70%_at_100%_100%,rgba(198,168,134,.12),transparent_65%)]"></div>
 
     <div class="mx-auto max-w-site px-5 pt-16 pb-28 lg:px-8 lg:pt-20 lg:pb-8">
 

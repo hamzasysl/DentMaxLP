@@ -64,7 +64,7 @@
     <meta name="twitter:image" content="{{ $ogImage }}">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#162b57">
+    <meta name="theme-color" content="#261c16">
     <meta name="author" content="{{ config('brand.doctor.name') }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 

@@ -58,7 +58,7 @@
                 <div data-reveal style="--d:120ms">
                     <x-before-after :before="$story['photos']['before'] ?? null" :after="$story['photos']['after'] ?? null"
                                     :alt="$story['name'] . ' – ' . $story['condition_label']"
-                                    class="shadow-[0_40px_80px_-50px_rgba(22,43,87,.55)] ring-1 ring-main-200/70" />
+                                    class="shadow-[0_40px_80px_-50px_rgba(38,28,22,.55)] ring-1 ring-main-200/70" />
                     @if(!empty($story['finished']))
                         <p class="mt-3 text-right text-[12.5px] text-main-400">Tedavi tamamlandı: {{ $story['finished'] }}</p>
                     @endif
@@ -143,7 +143,7 @@
 
     {{-- ============ RANDEVU BANDI ============ --}}
     <section class="relative isolate overflow-hidden bg-brand-900">
-        <div aria-hidden="true" class="absolute inset-0 -z-10 bg-[radial-gradient(60%_120%_at_0%_0%,rgba(68,105,179,.35),transparent_60%)]"></div>
+        <div aria-hidden="true" class="absolute inset-0 -z-10 bg-[radial-gradient(60%_120%_at_0%_0%,rgba(139,106,77,.35),transparent_60%)]"></div>
         <x-logo-mark class="pointer-events-none absolute -right-20 -bottom-20 -z-10 hidden h-[360px] w-auto md:block" style="--logo-ink:#fff; --logo-accent:#fff; opacity:.04;" />
         <div class="mx-auto grid max-w-site gap-8 px-5 py-12 lg:grid-cols-[minmax(0,380px)_minmax(0,1fr)] lg:items-center lg:gap-12 lg:px-8 lg:py-14">
             <div>

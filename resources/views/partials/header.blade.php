@@ -28,7 +28,7 @@
         }"
         x-init="scrolled = window.scrollY > 8; spy()"
         @scroll.window="scrolled = window.scrollY > 8"
-        :class="scrolled ? 'border-main-100 bg-white/95 shadow-[0_8px_30px_-12px_rgba(22,43,87,.25)]' : 'border-transparent'"
+        :class="scrolled ? 'border-main-100 bg-white/95 shadow-[0_8px_30px_-12px_rgba(38,28,22,.25)]' : 'border-transparent'"
         class="fixed inset-x-0 top-0 z-50 border-b bg-white/90 backdrop-blur-md transition-[box-shadow,border-color,background-color] duration-300">
     <div class="mx-auto flex h-16 max-w-site items-center justify-between gap-4 px-5 lg:h-[76px] lg:px-8">
 
@@ -65,7 +65,7 @@
 
             {{-- CTA: daha belirgin, üzerinden ara ara ışık geçer --}}
             <button type="button" onclick="Livewire.dispatch('open-book-consultation')"
-                    class="btn-accent relative inline-flex h-10 cursor-pointer items-center gap-2 overflow-hidden rounded-full px-4 text-[12.5px] font-semibold whitespace-nowrap shadow-[0_12px_26px_-10px_rgba(22,43,87,.75)] ring-2 ring-brand-100/80 transition hover:-translate-y-px sm:ml-1 sm:h-11 sm:px-6 sm:text-[14px] sm:ring-4">
+                    class="btn-accent relative inline-flex h-10 cursor-pointer items-center gap-2 overflow-hidden rounded-full px-4 text-[12.5px] font-semibold whitespace-nowrap shadow-[0_12px_26px_-10px_rgba(38,28,22,.75)] ring-2 ring-brand-100/80 transition hover:-translate-y-px sm:ml-1 sm:h-11 sm:px-6 sm:text-[14px] sm:ring-4">
                 <i class="fa-regular fa-calendar-check hidden text-[14px] text-[#ecd3a2] sm:inline"></i>
                 Ücretsiz Muayene
                 <span aria-hidden="true" class="cta-shine pointer-events-none absolute inset-y-0 -left-1/2 w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-white/35 to-transparent"></span>

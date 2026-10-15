@@ -1,7 +1,7 @@
 {{-- Ücretsiz diş analizi — Zürih LP'deki kart düzeni (solda fotoğraf, sağda 3 adımlı form) --}}
 <div class="w-full" data-step-form-root>
     <div class="mx-auto w-full max-w-6xl">
-        <div class="relative overflow-visible rounded-[22px] p-[1px] shadow-[0_30px_70px_-34px_rgba(22,43,87,.3)]">
+        <div class="relative overflow-visible rounded-[22px] p-[1px] shadow-[0_30px_70px_-34px_rgba(38,28,22,.3)]">
 
             {{-- hareketli çerçeve --}}
             <div class="step-brand-shimmer pointer-events-none absolute -inset-[1px] rounded-[23px] opacity-70"></div>

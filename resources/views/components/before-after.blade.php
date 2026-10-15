@@ -14,8 +14,8 @@
         <span class="absolute top-4 left-4 rounded-full bg-white/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-900 backdrop-blur">Önce</span>
         <span class="absolute top-4 right-4 rounded-full bg-brand-900/85 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-white backdrop-blur">Sonra</span>
 
-        <div class="pointer-events-none absolute inset-y-0 w-px bg-white shadow-[0_0_0_1px_rgba(22,43,87,.15)]" :style="`left:${pos}%`">
-            <span class="absolute top-1/2 left-1/2 flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white text-brand-800 shadow-[0_10px_24px_-8px_rgba(22,43,87,.6)]">
+        <div class="pointer-events-none absolute inset-y-0 w-px bg-white shadow-[0_0_0_1px_rgba(38,28,22,.15)]" :style="`left:${pos}%`">
+            <span class="absolute top-1/2 left-1/2 flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white text-brand-800 shadow-[0_10px_24px_-8px_rgba(38,28,22,.6)]">
                 <i class="fa-solid fa-left-right text-[13px]"></i>
             </span>
         </div>
@@ -27,7 +27,7 @@
     <div {{ $attributes->merge(['class' => 'relative grid aspect-[4/3] grid-cols-2 gap-px overflow-hidden rounded-[24px] bg-main-200/70']) }}>
         @foreach(['Önce', 'Sonra'] as $label)
             <div class="relative flex flex-col items-center justify-center gap-3 {{ $loop->first ? 'bg-ivory' : 'bg-white' }}">
-                <div aria-hidden="true" class="absolute inset-0 opacity-[.5] [background-image:radial-gradient(rgba(22,43,87,.09)_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                <div aria-hidden="true" class="absolute inset-0 opacity-[.5] [background-image:radial-gradient(rgba(38,28,22,.09)_1px,transparent_1px)] [background-size:16px_16px]"></div>
                 <span class="relative inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-brand-600 ring-1 ring-main-200">
                     <i class="fa-regular fa-image text-[16px]"></i>
                 </span>

@@ -20,9 +20,9 @@
         <img src="{{ asset('img/hero-poster.jpg') }}" alt="" aria-hidden="true" class="absolute inset-0 -z-30 hidden h-full w-full object-cover motion-reduce:block">
 
         {{-- Perde: soldan vurgu rengi, sağa doğru açılır --}}
-        <div aria-hidden="true" class="absolute inset-0 -z-20 bg-[linear-gradient(90deg,rgb(11_26_51/.95)_0%,rgb(19_40_79/.86)_40%,rgb(17_17_20/.55)_78%,rgb(17_17_20/.42)_100%)]"></div>
+        <div aria-hidden="true" class="absolute inset-0 -z-20 bg-[linear-gradient(90deg,rgb(26_19_15/.95)_0%,rgb(46_33_25/.86)_40%,rgb(22_19_17/.55)_78%,rgb(22_19_17/.42)_100%)]"></div>
         {{-- Sinematik derinlik: üst/alt kararma --}}
-        <div aria-hidden="true" class="absolute inset-0 -z-20 bg-[linear-gradient(180deg,rgb(11_14_20/.45)_0%,transparent_28%,transparent_72%,rgb(11_14_20/.5)_100%)]"></div>
+        <div aria-hidden="true" class="absolute inset-0 -z-20 bg-[linear-gradient(180deg,rgb(20_16_13/.45)_0%,transparent_28%,transparent_72%,rgb(20_16_13/.5)_100%)]"></div>
         {{-- Soldan şeritler --}}
         <div aria-hidden="true" class="pointer-events-none absolute inset-y-0 -left-32 -z-10 w-[44%] -skew-x-12 bg-white/[0.035]"></div>
         <div aria-hidden="true" class="pointer-events-none absolute inset-y-0 left-[34%] -z-10 hidden w-px -skew-x-12 bg-gradient-to-b from-transparent via-white/25 to-transparent lg:block"></div>
@@ -107,17 +107,17 @@
         <div class="mx-auto grid max-w-site items-center gap-12 px-5 lg:grid-cols-[1.05fr_.95fr] lg:gap-16 lg:px-8">
             {{-- Kompozisyon: büyük portre + üstüne binen ürün fotoğrafı + bilgi kartı --}}
             <div data-reveal class="relative pr-8 pb-12 sm:pr-16 sm:pb-16">
-                <div class="overflow-hidden rounded-[30px] shadow-[0_40px_80px_-50px_rgba(15,33,71,.55)]">
+                <div class="overflow-hidden rounded-[30px] shadow-[0_40px_80px_-50px_rgba(38,28,22,.55)]">
                     <img src="{{ asset('img/lp/invisalign/aligner-smile.webp') }}" alt="Şeffaf plağını takarken gülümseyen hasta" loading="lazy"
                          class="aspect-[4/4] w-full object-cover object-[52%_55%]">
                 </div>
 
-                <div class="absolute right-0 bottom-0 w-[48%] overflow-hidden rounded-[24px] border-[6px] border-ivory shadow-[0_30px_60px_-30px_rgba(15,33,71,.5)]">
+                <div class="absolute right-0 bottom-0 w-[48%] overflow-hidden rounded-[24px] border-[6px] border-ivory shadow-[0_30px_60px_-30px_rgba(38,28,22,.5)]">
                     <img src="{{ asset('img/lp/invisalign/aligner-grey.webp') }}" alt="Şeffaf plaklar" loading="lazy"
                          class="aspect-[4/3] w-full object-cover">
                 </div>
 
-                <div class="absolute top-8 -left-3 rounded-2xl bg-white/95 px-5 py-4 shadow-[0_24px_48px_-24px_rgba(15,33,71,.45)] ring-1 ring-main-100 backdrop-blur sm:-left-8">
+                <div class="absolute top-8 -left-3 rounded-2xl bg-white/95 px-5 py-4 shadow-[0_24px_48px_-24px_rgba(38,28,22,.45)] ring-1 ring-main-100 backdrop-blur sm:-left-8">
                     <p class="text-[34px] font-extralight leading-none tracking-[-0.02em] text-main-900">20–22<span class="ml-1 text-[13px] font-light text-brand-700">saat</span></p>
                     <p class="mt-1.5 text-[11px] uppercase tracking-[0.2em] text-main-500">Günlük kullanım</p>
                 </div>
@@ -204,7 +204,7 @@
                     @foreach($caseItems as $i => $case)
                         <button type="button" @click="select({{ $i }})"
                                 :class="active === {{ $i }}
-                                    ? 'bg-white text-brand-800 ring-2 ring-brand-600 shadow-[0_16px_34px_-18px_rgba(15,33,71,.45)] -translate-y-0.5'
+                                    ? 'bg-white text-brand-800 ring-2 ring-brand-600 shadow-[0_16px_34px_-18px_rgba(38,28,22,.45)] -translate-y-0.5'
                                     : 'bg-ivory text-main-700 ring-1 ring-main-200/70 hover:bg-white hover:ring-brand-300'"
                                 class="flex min-w-0 cursor-pointer flex-col items-center rounded-xl px-1.5 pt-2.5 pb-3 text-center transition duration-300 sm:rounded-2xl sm:px-3 sm:pt-4 sm:pb-5">
                             <span class="flex min-h-[2.4rem] items-center text-[10.5px] leading-tight font-normal break-words hyphens-auto sm:min-h-[2.5rem] sm:text-[13.5px]">{{ $case['title'] }}</span>
@@ -217,7 +217,7 @@
             </div>
 
             {{-- Panel --}}
-            <div data-reveal class="mt-8 grid gap-8 rounded-[28px] bg-white p-4 shadow-[0_40px_80px_-50px_rgba(10,20,36,.5)] ring-1 ring-main-100 sm:p-6 lg:grid-cols-[1.25fr_1fr] lg:gap-12 lg:p-8"
+            <div data-reveal class="mt-8 grid gap-8 rounded-[28px] bg-white p-4 shadow-[0_40px_80px_-50px_rgba(30,24,20,.5)] ring-1 ring-main-100 sm:p-6 lg:grid-cols-[1.25fr_1fr] lg:gap-12 lg:p-8"
                  x-intersect.once="play()">
 
                 <div>
@@ -279,7 +279,7 @@
         <img src="{{ asset('img/lp/invisalign/retainer-case.webp') }}" alt="" aria-hidden="true" loading="lazy"
              class="absolute inset-0 -z-20 h-full w-full object-cover object-[50%_45%]">
         <div aria-hidden="true" class="absolute inset-0 -z-10 bg-gradient-to-r from-brand-900/[.97] via-brand-900/[.95] to-brand-900/[.93]"></div>
-        <div aria-hidden="true" class="absolute inset-0 -z-10 bg-[radial-gradient(60%_120%_at_0%_0%,rgba(61,99,174,.3),transparent_60%)]"></div>
+        <div aria-hidden="true" class="absolute inset-0 -z-10 bg-[radial-gradient(60%_120%_at_0%_0%,rgba(139,106,77,.3),transparent_60%)]"></div>
 
         <div class="mx-auto grid max-w-site gap-8 px-5 py-12 lg:grid-cols-[minmax(0,380px)_minmax(0,1fr)] lg:items-center lg:gap-12 lg:px-8 lg:py-14">
             <div data-reveal>
@@ -322,7 +322,7 @@
                 <ul class="order-2 space-y-8 lg:order-1 lg:space-y-12">
                     @foreach($benefitCols[0] as $b)
                         <li data-reveal style="--d: {{ $loop->index * 90 }}ms" class="group flex items-start gap-5 lg:flex-row-reverse lg:text-right">
-                            <span class="relative inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-brand-700 shadow-[0_10px_24px_-14px_rgba(15,33,71,.5)] ring-1 ring-main-200/80 transition duration-300 group-hover:bg-brand-700 group-hover:text-white group-hover:ring-brand-700">
+                            <span class="relative inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-brand-700 shadow-[0_10px_24px_-14px_rgba(38,28,22,.5)] ring-1 ring-main-200/80 transition duration-300 group-hover:bg-brand-700 group-hover:text-white group-hover:ring-brand-700">
                                 <i class="fa-solid {{ $b['icon'] }} text-[15px]"></i>
                                 <span aria-hidden="true" class="absolute top-1/2 -left-12 hidden h-px w-10 bg-gradient-to-l from-brand-300 to-transparent lg:block lg:-right-12 lg:left-auto lg:bg-gradient-to-r"></span>
                             </span>
@@ -337,13 +337,13 @@
                 {{-- Orta: kemer fotoğraf --}}
                 <div data-reveal class="relative order-1 mx-auto w-full max-w-[380px] lg:order-2">
                     <div class="absolute -inset-3 rounded-t-full rounded-b-[36px] border border-brand-200/80"></div>
-                    <div class="relative aspect-[4/5] overflow-hidden rounded-t-full rounded-b-[28px] bg-main-100 shadow-[0_50px_90px_-50px_rgba(15,33,71,.6)]">
+                    <div class="relative aspect-[4/5] overflow-hidden rounded-t-full rounded-b-[28px] bg-main-100 shadow-[0_50px_90px_-50px_rgba(38,28,22,.6)]">
                         <img src="{{ asset('img/lp/invisalign/aligner-hold.webp') }}" alt="Şeffaf plağını tutan gülümseyen hasta" loading="lazy"
                              class="h-full w-full object-cover object-[76%_50%]">
                         <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-t from-brand-900/35 via-transparent to-transparent"></div>
                     </div>
 
-                    <div class="absolute -bottom-5 left-1/2 flex -translate-x-1/2 items-center gap-3 whitespace-nowrap rounded-full bg-white py-2 pr-5 pl-2 shadow-[0_18px_40px_-20px_rgba(15,33,71,.55)] ring-1 ring-main-100">
+                    <div class="absolute -bottom-5 left-1/2 flex -translate-x-1/2 items-center gap-3 whitespace-nowrap rounded-full bg-white py-2 pr-5 pl-2 shadow-[0_18px_40px_-20px_rgba(38,28,22,.55)] ring-1 ring-main-100">
                         <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-brand-700 text-white"><i class="fa-regular fa-clock text-[13px]"></i></span>
                         <span class="text-[13.5px] text-main-700"><span class="font-normal text-main-900">20–22 saat</span> günlük kullanım</span>
                     </div>
@@ -353,7 +353,7 @@
                 <ul class="order-3 space-y-8 lg:space-y-12">
                     @foreach($benefitCols[1] as $b)
                         <li data-reveal style="--d: {{ $loop->index * 90 + 120 }}ms" class="group flex items-start gap-5">
-                            <span class="relative inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-brand-700 shadow-[0_10px_24px_-14px_rgba(15,33,71,.5)] ring-1 ring-main-200/80 transition duration-300 group-hover:bg-brand-700 group-hover:text-white group-hover:ring-brand-700">
+                            <span class="relative inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-brand-700 shadow-[0_10px_24px_-14px_rgba(38,28,22,.5)] ring-1 ring-main-200/80 transition duration-300 group-hover:bg-brand-700 group-hover:text-white group-hover:ring-brand-700">
                                 <i class="fa-solid {{ $b['icon'] }} text-[15px]"></i>
                                 <span aria-hidden="true" class="absolute top-1/2 -left-12 hidden h-px w-10 bg-gradient-to-l from-brand-300 to-transparent lg:block"></span>
                             </span>
@@ -393,7 +393,7 @@
 
         <div class="relative mx-auto max-w-site px-5 pb-16 lg:px-8 lg:py-28">
             <div class="max-w-[560px]">
-                <p data-reveal class="-mt-8 inline-flex items-center gap-3 rounded-xl bg-white py-2 pr-4 pl-2 text-[13.5px] text-main-600 shadow-[0_10px_30px_-18px_rgba(15,33,71,.45)] ring-1 ring-main-200/80 lg:mt-0">
+                <p data-reveal class="-mt-8 inline-flex items-center gap-3 rounded-xl bg-white py-2 pr-4 pl-2 text-[13.5px] text-main-600 shadow-[0_10px_30px_-18px_rgba(38,28,22,.45)] ring-1 ring-main-200/80 lg:mt-0">
                     <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-brand-50 text-brand-700"><i class="fa-solid fa-gem text-[12px]"></i></span>
                     <span><span class="font-medium text-main-900">Plak sistemi:</span> <span lang="en">Invisalign® · Align Technology</span></span>
                 </p>
@@ -418,7 +418,7 @@
         </div>
 
         {{-- Yuvarlak detay fotoğrafı --}}
-        <div aria-hidden="true" class="absolute right-[8%] bottom-[9%] hidden h-[210px] w-[210px] rounded-full bg-white/30 p-2.5 shadow-[0_30px_60px_-24px_rgba(15,33,71,.55)] ring-1 ring-white/70 backdrop-blur-sm lg:block xl:h-[230px] xl:w-[230px]">
+        <div aria-hidden="true" class="absolute right-[8%] bottom-[9%] hidden h-[210px] w-[210px] rounded-full bg-white/30 p-2.5 shadow-[0_30px_60px_-24px_rgba(38,28,22,.55)] ring-1 ring-white/70 backdrop-blur-sm lg:block xl:h-[230px] xl:w-[230px]">
             <img src="{{ asset('img/lp/invisalign/aligner-white.webp') }}" alt="" loading="lazy"
                  class="h-full w-full rounded-full object-cover object-center">
         </div>
@@ -439,7 +439,7 @@
                 </button>
             </div>
 
-            <div data-reveal style="--d:120ms" class="overflow-hidden rounded-[26px] bg-white shadow-[0_40px_80px_-50px_rgba(10,20,36,.45)] ring-1 ring-main-200/70">
+            <div data-reveal style="--d:120ms" class="overflow-hidden rounded-[26px] bg-white shadow-[0_40px_80px_-50px_rgba(30,24,20,.45)] ring-1 ring-main-200/70">
                 <div class="grid grid-cols-[minmax(0,.85fr)_minmax(0,1.1fr)_minmax(0,1fr)] text-[12.5px] font-semibold sm:text-[14px]">
                     <div class="px-3 py-5 sm:px-6"></div>
                     <div class="bg-brand-700 px-3 py-5 text-white sm:px-6">Invisalign®</div>
@@ -463,7 +463,7 @@
     {{-- ============ 8. ÜCRETSİZ DİŞ ANALİZİ (Zürih'teki adım adım form) ============ --}}
     <section id="analiz" class="relative isolate overflow-clip bg-ivory py-16 lg:py-24">
         <x-mark-watermark class="-left-24 bottom-6 h-[380px]" />
-        <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_50%_0%,rgba(68,105,179,.12),transparent_70%),radial-gradient(45%_45%_at_100%_100%,rgba(201,151,63,.06),transparent_70%)]"></div>
+        <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_50%_0%,rgba(139,106,77,.12),transparent_70%),radial-gradient(45%_45%_at_100%_100%,rgba(201,151,63,.06),transparent_70%)]"></div>
         <div aria-hidden="true" class="bg-dots pointer-events-none absolute inset-0 -z-10"></div>
 
         <div class="mx-auto max-w-site px-5 lg:px-8">
@@ -531,7 +531,7 @@
         <div class="mx-auto grid max-w-site items-center gap-12 px-5 lg:grid-cols-[1fr_1fr] lg:items-stretch lg:gap-16 lg:px-8">
             <div data-reveal class="relative -mx-1 w-auto sm:mx-auto sm:w-full sm:max-w-md lg:max-w-none">
                 <div aria-hidden="true" class="absolute -inset-6 rounded-[40px] bg-brand-200/40 blur-3xl"></div>
-                <div class="relative overflow-hidden rounded-[30px] bg-white shadow-[0_40px_80px_-50px_rgba(15,33,71,.55)] ring-1 ring-main-200/80 lg:h-full lg:min-h-[560px]">
+                <div class="relative overflow-hidden rounded-[30px] bg-white shadow-[0_40px_80px_-50px_rgba(38,28,22,.55)] ring-1 ring-main-200/80 lg:h-full lg:min-h-[560px]">
                     <img src="{{ asset('img/lp/invisalign/dr-fatih-kahraman.webp') }}" alt="{{ $doctor['name'] }}" loading="lazy"
                          width="960" height="1240" class="aspect-[4/5] h-auto w-full object-cover object-[50%_8%] sm:aspect-[960/1020] sm:object-top lg:absolute lg:inset-0 lg:aspect-auto lg:h-full">
                     {{-- Üyelikler ve sertifikalar --}}
@@ -551,7 +551,7 @@
                     </div>
 
                     {{-- Diamond rozeti --}}
-                    <div class="absolute top-4 right-4 rounded-2xl bg-white/90 px-4 py-3 text-center shadow-[0_14px_30px_-18px_rgba(15,33,71,.6)] ring-1 ring-main-200/70 backdrop-blur-md">
+                    <div class="absolute top-4 right-4 rounded-2xl bg-white/90 px-4 py-3 text-center shadow-[0_14px_30px_-18px_rgba(38,28,22,.6)] ring-1 ring-main-200/70 backdrop-blur-md">
                         <i class="fa-solid fa-gem text-[14px] text-brand-600"></i>
                         <p class="mt-1 text-[11px] font-semibold tracking-[0.18em] text-brand-700" lang="en">DIAMOND</p>
                         <p class="text-[10.5px] text-main-600"><span lang="en">Invisalign</span> · Top %1</p>
@@ -617,7 +617,7 @@
                     </h2>
                 </div>
                 <a data-reveal href="{{ config('brand.google_reviews_url') }}" target="_blank" rel="noopener" aria-label="Google yorumlarını görüntüle"
-                   class="group inline-flex w-fit items-center gap-3 rounded-full bg-white py-2 pr-5 pl-2 shadow-[0_12px_30px_-20px_rgba(15,33,71,.5)] ring-1 ring-main-200/80 transition hover:ring-brand-200">
+                   class="group inline-flex w-fit items-center gap-3 rounded-full bg-white py-2 pr-5 pl-2 shadow-[0_12px_30px_-20px_rgba(38,28,22,.5)] ring-1 ring-main-200/80 transition hover:ring-brand-200">
                     <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-main-50">
                         <svg viewBox="0 0 48 48" class="h-5 w-5" aria-hidden="true">
                             <path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 8 3l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"/>
@@ -665,7 +665,7 @@
                 @for($set = 0; $set < 2; $set++)
                     @foreach($reviews as $r)
                         <article @if($set) aria-hidden="true" @endif
-                                 class="review-card flex w-[310px] shrink-0 flex-col rounded-3xl bg-ivory p-6 ring-1 ring-main-200/70 transition duration-300 hover:bg-white hover:shadow-[0_30px_60px_-40px_rgba(15,33,71,.55)] sm:w-[370px]">
+                                 class="review-card flex w-[310px] shrink-0 flex-col rounded-3xl bg-ivory p-6 ring-1 ring-main-200/70 transition duration-300 hover:bg-white hover:shadow-[0_30px_60px_-40px_rgba(38,28,22,.55)] sm:w-[370px]">
                             <div class="flex items-center gap-3.5">
                                 <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-brand-700 to-brand-900 text-[14px] font-medium text-white">{{ $r['initials'] }}</span>
                                 <div class="min-w-0 flex-1">
@@ -712,7 +712,7 @@
                 <div x-data="{ open: 0 }" class="space-y-3">
                     @foreach($faqItems as $i => $faq)
                         <div data-reveal style="--d: {{ $loop->index * 40 }}ms"
-                             :class="open === {{ $i }} ? 'border-brand-300 shadow-[0_18px_40px_-28px_rgba(15,33,71,.45)]' : 'border-main-200/80'"
+                             :class="open === {{ $i }} ? 'border-brand-300 shadow-[0_18px_40px_-28px_rgba(38,28,22,.45)]' : 'border-main-200/80'"
                              class="rounded-2xl border bg-white transition duration-300">
                             <button type="button" @click="open = open === {{ $i }} ? null : {{ $i }}"
                                     class="flex w-full cursor-pointer items-center gap-4 px-5 py-4 text-left sm:px-6">

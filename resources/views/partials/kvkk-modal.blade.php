@@ -23,7 +23,7 @@
     <div x-show="open"
          x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-6 sm:scale-[.98]" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
          x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0 translate-y-4"
-         class="relative flex max-h-[88vh] w-full max-w-2xl flex-col overflow-hidden rounded-t-[26px] bg-white shadow-[0_40px_90px_-30px_rgba(22,43,87,.6)] sm:rounded-[26px]">
+         class="relative flex max-h-[88vh] w-full max-w-2xl flex-col overflow-hidden rounded-t-[26px] bg-white shadow-[0_40px_90px_-30px_rgba(38,28,22,.6)] sm:rounded-[26px]">
 
         {{-- Başlık --}}
         <div class="flex items-start justify-between gap-4 border-b border-main-100 px-6 pt-6 pb-5 sm:px-8">

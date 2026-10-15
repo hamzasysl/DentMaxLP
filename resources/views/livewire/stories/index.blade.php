@@ -27,12 +27,12 @@
                 @foreach($stories as $story)
                     @php($after = $story['photos']['after'] ?? null)
                     <a data-reveal style="--d: {{ $loop->index * 70 }}ms" href="{{ route('stories.show', $story['slug']) }}"
-                       class="group flex flex-col overflow-hidden rounded-[24px] bg-white ring-1 ring-main-200/70 transition duration-300 hover:-translate-y-1 hover:shadow-[0_30px_60px_-36px_rgba(22,43,87,.5)] hover:ring-brand-200">
+                       class="group flex flex-col overflow-hidden rounded-[24px] bg-white ring-1 ring-main-200/70 transition duration-300 hover:-translate-y-1 hover:shadow-[0_30px_60px_-36px_rgba(38,28,22,.5)] hover:ring-brand-200">
                         <div class="relative aspect-[4/3] overflow-hidden bg-main-50">
                             @if($after)
                                 <img src="{{ asset($after) }}" alt="{{ $story['name'] }} – tedavi sonrası" loading="lazy" class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]">
                             @else
-                                <div aria-hidden="true" class="absolute inset-0 opacity-60 [background-image:radial-gradient(rgba(22,43,87,.09)_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                                <div aria-hidden="true" class="absolute inset-0 opacity-60 [background-image:radial-gradient(rgba(38,28,22,.09)_1px,transparent_1px)] [background-size:16px_16px]"></div>
                                 <span aria-hidden="true" class="absolute inset-x-10 top-1/2 block aspect-[2.4] -translate-y-1/2 bg-current text-brand-700/70" style="{{ $iconMask($story['condition']) }}"></span>
                             @endif
                             <span class="absolute top-4 left-4 rounded-full bg-white/90 px-3 py-1 text-[11.5px] text-brand-800 ring-1 ring-main-200/70 backdrop-blur">{{ $story['condition_label'] }}</span>

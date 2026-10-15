@@ -52,7 +52,7 @@ class LuckySpin extends Component
             'rim_stroke'  => '#ffffff',
             'dot_color'   => '#000000',
             'cap_outer'   => '#ffffff',
-            'cap_inner'   => '#264b91',
+            'cap_inner'   => '#5c4331',
             'pin_grad'    => ['#ecd3a2', '#c9973f', '#a8772e'], // bal tonu (detay rengi)
             'text_fill'   => 'rgba(255,255,255,0.96)',
             'text_stroke' => 'rgba(0,0,0,0.18)',

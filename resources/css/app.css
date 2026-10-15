@@ -9,32 +9,32 @@
         /* Sayfa konteyner genişliği (max-w-site) */
         --container-site: 1320px;
 
-        /* MAIN — nötr (siyah / gri / beyaz). Sayfanın ana dili */
-        --color-main-50:  #f6f6f7;
-        --color-main-100: #ececee;
-        --color-main-200: #dadadd;
-        --color-main-300: #b8b8bd;
-        --color-main-400: #85858c;
-        --color-main-500: #5c5c63;
-        --color-main-600: #434349;
-        --color-main-700: #2e2e33;
-        --color-main-800: #1c1c20;
-        --color-main-900: #111114;
+        /* MAIN — sıcak nötr (koyu kahve-siyahtan beyaza). Sayfanın ana dili */
+        --color-main-50:  #f8f6f3;
+        --color-main-100: #f0ece7;
+        --color-main-200: #e2dcd5;
+        --color-main-300: #c7bfb6;
+        --color-main-400: #9b928a;
+        --color-main-500: #706861;
+        --color-main-600: #554f49;
+        --color-main-700: #3b3632;
+        --color-main-800: #24201d;
+        --color-main-900: #161311;
 
-        /* BRAND — gece laciverti (tek vurgu rengi): buton, çizgi, ikon, çark */
-        --color-brand-50:  #eef2fa;
-        --color-brand-100: #dde5f4;
-        --color-brand-200: #b9cdf0;
-        --color-brand-300: #94b0e2;
-        --color-brand-400: #6488cc;
-        --color-brand-500: #4469b3;
-        --color-brand-600: #3157a1;
-        --color-brand-700: #264b91;
-        --color-brand-800: #1d3b74;
-        --color-brand-900: #162b57;
+        /* BRAND — kahve (tek vurgu rengi): buton, çizgi, ikon. 900 neredeyse siyah koyu kahve */
+        --color-brand-50:  #f7f1ea;
+        --color-brand-100: #eee3d6;
+        --color-brand-200: #ddc8b1;
+        --color-brand-300: #c6a886;
+        --color-brand-400: #a98663;
+        --color-brand-500: #8b6a4d;
+        --color-brand-600: #73563d;
+        --color-brand-700: #5c4331;
+        --color-brand-800: #3f2e23;
+        --color-brand-900: #261c16;
 
-        /* Açık bölümler — nötr açık gri */
-        --color-ivory: #f6f6f7;
+        /* Açık bölümler — bej */
+        --color-ivory: #f5efe7;
     }
 }
 
@@ -104,12 +104,12 @@ html { overflow-x: clip; }
     left: -100%;
     width: 300%;
     background-image: linear-gradient(110deg,
-        rgba(38, 75, 145, 0) 0%,
-        rgba(38, 75, 145, .8) 16%,
+        rgba(92, 67, 49, 0) 0%,
+        rgba(92, 67, 49, .8) 16%,
         rgba(201, 151, 63, .6) 32%,
-        rgba(148, 176, 226, .4) 48%,
-        rgba(185, 205, 240, .2) 62%,
-        rgba(38, 75, 145, 0) 78%);
+        rgba(198, 168, 134, .4) 48%,
+        rgba(221, 200, 177, .2) 62%,
+        rgba(92, 67, 49, 0) 78%);
     animation: stepShimmer 4.6s linear infinite alternate;
     will-change: transform;
 }
@@ -117,7 +117,7 @@ html { overflow-x: clip; }
 .step-anim { animation: stepIn .55s cubic-bezier(.22, 1, .36, 1) both; }
 @keyframes stepIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 .bg-dots {
-    background-image: radial-gradient(rgba(22, 43, 87, .14) 1px, transparent 1px);
+    background-image: radial-gradient(rgba(38, 28, 22, .14) 1px, transparent 1px);
     background-size: 22px 22px;
     -webkit-mask-image: radial-gradient(ellipse 60% 55% at 50% 50%, #000 20%, transparent 75%);
             mask-image: radial-gradient(ellipse 60% 55% at 50% 50%, #000 20%, transparent 75%);

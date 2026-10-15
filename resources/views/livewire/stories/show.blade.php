@@ -141,21 +141,6 @@
         </section>
     @endif
 
-    {{-- ============ RANDEVU BANDI ============ --}}
-    <section class="relative isolate overflow-hidden bg-brand-900">
-        <div aria-hidden="true" class="absolute inset-0 -z-10 bg-[radial-gradient(60%_120%_at_0%_0%,rgba(139,106,77,.35),transparent_60%)]"></div>
-        <x-logo-mark class="pointer-events-none absolute -right-20 -bottom-20 -z-10 hidden h-[360px] w-auto md:block" style="--logo-ink:#fff; --logo-accent:#fff; opacity:.04;" />
-        <div class="mx-auto grid max-w-site gap-8 px-5 py-12 lg:grid-cols-[minmax(0,380px)_minmax(0,1fr)] lg:items-center lg:gap-12 lg:px-8 lg:py-14">
-            <div>
-                <p class="flex items-center gap-3 text-[11.5px] font-medium uppercase tracking-[0.32em] text-brand-200"><span class="h-px w-8 bg-brand-300/70"></span>Benzer bir durum mu?</p>
-                <h2 class="mt-4 text-[32px] leading-[1.1] tracking-[-0.02em] text-white lg:text-[38px]"><span class="block font-thin">Sizin İçin de</span><span class="block font-light whitespace-nowrap">Planlayalım</span></h2>
-                <p class="mt-3 text-[14px] leading-relaxed text-white/60">Bilgilerinizi bırakın, muayene için sizi arayalım.</p>
-            </div>
-            <livewire:ui.forms.simple-form layout="lead-band" variant="dark" :topic="$story['condition_label']"
-                :email-required="true" :require-consent="true" form-key="story" />
-        </div>
-    </section>
-
     {{-- ============ SONRAKİ HİKAYE ============ --}}
     <section class="bg-white py-12 lg:py-16">
         <div class="mx-auto flex max-w-site flex-col gap-4 px-5 sm:flex-row sm:items-center sm:justify-between lg:px-8">

@@ -63,12 +63,11 @@
                 <i class="fa-brands fa-whatsapp text-[19px]"></i>
             </a>
 
-            {{-- CTA: daha belirgin, üzerinden ara ara ışık geçer --}}
+            {{-- CTA: düz koyu kahve --}}
             <button type="button" onclick="Livewire.dispatch('open-book-consultation')"
                     class="btn-accent relative inline-flex h-10 cursor-pointer items-center gap-2 overflow-hidden rounded-full px-4 text-[12.5px] font-semibold whitespace-nowrap shadow-[0_12px_26px_-10px_rgba(38,28,22,.75)] ring-2 ring-brand-100/80 transition hover:-translate-y-px sm:ml-1 sm:h-11 sm:px-6 sm:text-[14px] sm:ring-4">
                 <i class="fa-regular fa-calendar-check hidden text-[14px] text-[#ecd3a2] sm:inline"></i>
                 Ücretsiz Muayene
-                <span aria-hidden="true" class="cta-shine pointer-events-none absolute inset-y-0 -left-1/2 w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-white/35 to-transparent"></span>
             </button>
         </div>
     </div>

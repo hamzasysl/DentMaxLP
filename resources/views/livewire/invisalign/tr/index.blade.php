@@ -32,7 +32,7 @@
             <div class="text-white">
                 <p data-reveal class="flex items-center gap-3 text-[10.5px] font-medium uppercase tracking-[0.22em] text-white/70 sm:gap-4 sm:text-[11px] sm:tracking-[0.32em]">
                     <span class="h-px w-8 shrink-0 bg-brand-300/70 sm:w-10"></span>
-                    <span><span lang="en">Invisalign®</span> · İstanbul · Balıkesir</span>
+                    <span><span lang="en">Invisalign®</span> · İstanbul · Bakırköy</span>
                 </p>
 
                 <h1 data-reveal style="--d:80ms" class="mt-6 text-[38px] font-normal leading-[1.08] tracking-[-0.025em] sm:text-[50px] lg:text-[58px]">
@@ -276,7 +276,7 @@
     {{-- ============ 6b. YATAY FORM BANDI ============ --}}
     <section id="randevu-band" class="relative isolate overflow-hidden bg-brand-900">
         {{-- Arka plan: klinik binası + lacivert perde --}}
-        <img src="{{ asset('img/lp/invisalign/clinic-building.webp') }}" alt="" aria-hidden="true" loading="lazy"
+        <img src="{{ asset('img/lp/invisalign/retainer-case.webp') }}" alt="" aria-hidden="true" loading="lazy"
              class="absolute inset-0 -z-20 h-full w-full object-cover object-[50%_45%]">
         <div aria-hidden="true" class="absolute inset-0 -z-10 bg-gradient-to-r from-brand-900/[.97] via-brand-900/[.95] to-brand-900/[.93]"></div>
         <div aria-hidden="true" class="absolute inset-0 -z-10 bg-[radial-gradient(60%_120%_at_0%_0%,rgba(61,99,174,.3),transparent_60%)]"></div>
@@ -491,12 +491,12 @@
         </div>
     </section>
 
-    {{-- ============ 7c. MESAİ SONRASI (Balıkesir — her gün 23:00'e kadar) ============ --}}
-    @php($blk = config('brand.branches.balikesir'))
+    {{-- ============ 7c. MESAİ SONRASI (İstanbul — pazartesi–cumartesi 19:30'a kadar) ============ --}}
+    @php($blk = config('brand.branches.istanbul'))
     <section id="mesai-sonrasi" class="relative isolate overflow-hidden bg-brand-900">
         {{-- Sağ: klinik binası, soldan laciverte eriyerek --}}
         <div aria-hidden="true" class="relative h-[240px] sm:h-[320px] lg:absolute lg:inset-y-0 lg:right-0 lg:h-auto lg:w-[55%]">
-            <img src="{{ asset('img/lp/invisalign/clinic-building.webp') }}" alt="" loading="lazy" class="h-full w-full object-cover object-[50%_45%]">
+            <img src="{{ asset('img/lp/invisalign/scan-screen.webp') }}" alt="" loading="lazy" class="h-full w-full object-cover object-[50%_45%]">
             <div class="absolute inset-0 bg-gradient-to-t from-brand-900 via-brand-900/40 to-brand-900/10 lg:bg-gradient-to-r lg:from-brand-900 lg:via-brand-900/55 lg:to-brand-900/15"></div>
         </div>
 
@@ -506,10 +506,10 @@
                     <i class="fa-solid fa-moon text-[12px] text-[#e2b979]"></i> Mesai sonrası da yanınızdayız
                 </p>
                 <h2 data-reveal style="--d:60ms" class="mt-5 text-[clamp(32px,3.6vw,48px)] leading-[1.12] tracking-[-0.02em] font-light text-white">
-                    Akşam Saatlerinde de <span class="font-semibold">Muayene</span> İmkânı
+                    Cumartesi Dahil <span class="font-semibold">Akşam 19:30’a Kadar</span> Açığız
                 </h2>
                 <p data-reveal style="--d:120ms" class="mt-5 text-[16px] leading-relaxed text-white/70">
-                    Balıkesir kliniğimiz her gün 23:00’e, İstanbul kliniğimiz pazartesi–cumartesi 19:30’a kadar açık. İş çıkışı muayene ve kontrol randevunuzu kolayca planlayın.
+                    Bakırköy Ataköy Towers’taki kliniğimiz pazartesiden cumartesiye 09:00–19:30 arası açık. İş çıkışı muayene ve kontrol randevunuzu kolayca planlayın.
                 </p>
                 <div data-reveal style="--d:180ms" class="mt-9 flex flex-wrap gap-3">
                     <button type="button" onclick="Livewire.dispatch('open-book-consultation')"
@@ -566,7 +566,7 @@
                 <p data-reveal style="--d:120ms" class="mt-2 text-[15.5px] text-brand-700">Ortodonti Uzmanı <span class="text-main-300">·</span> <span class="text-main-500">DDS, PhD</span></p>
 
                 <p data-reveal style="--d:160ms" class="mt-6 text-[16px] leading-relaxed text-main-600">
-                    6 yıllık ortodonti uzmanlık eğitimini tamamlamış, Sağlık Bakanlığı onaylı bir ortodonti uzmanıdır. 15 yılı aşkın deneyimiyle İstanbul ve Balıkesir’de şeffaf plak, dijital ortodonti ve ameliyatsız çene genişletme tedavilerini bizzat yürütür. Yurt içi ve yurt dışı kongrelerde konuşmacı olarak yer alır.
+                    6 yıllık ortodonti uzmanlık eğitimini tamamlamış, Sağlık Bakanlığı onaylı bir ortodonti uzmanıdır. 15 yılı aşkın deneyimiyle İstanbul’da şeffaf plak, dijital ortodonti ve ameliyatsız çene genişletme tedavilerini bizzat yürütür. Yurt içi ve yurt dışı kongrelerde konuşmacı olarak yer alır.
                 </p>
 
                 {{-- Rakamlar --}}

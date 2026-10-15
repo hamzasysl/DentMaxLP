@@ -7,7 +7,8 @@
     $dayMap = ['Pazartesi – Cumartesi' => ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
                'Her gün açık'          => ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']];
 
-    $branches = collect(config('brand.branches'))->map(function ($b, $key) use ($home, $dayMap) {
+    // SEO'da yalnızca İstanbul muayenesi yer alır (Balıkesir yalnızca footer'da)
+    $branches = collect(config('brand.branches'))->only(['istanbul'])->map(function ($b, $key) use ($home, $dayMap) {
         $hours = collect($b['hours'] ?? [])
             ->filter(fn ($t, $day) => isset($dayMap[$day]) && preg_match('/(\d{2})[.:](\d{2})\s*[–-]\s*(\d{2})[.:](\d{2})/u', $t))
             ->map(function ($t, $day) use ($dayMap) {
@@ -38,10 +39,10 @@
             'url'         => $home,
             'logo'        => asset('img/apple-touch-icon.png'),
             'image'       => asset('img/lp/invisalign/og.jpg'),
-            'description' => 'Ortodonti uzmanı ' . $doctor . ' ile İstanbul ve Balıkesir’de Invisalign şeffaf plak ve ortodonti tedavileri.',
+            'description' => 'Ortodonti uzmanı ' . $doctor . ' ile İstanbul’da Invisalign şeffaf plak ve ortodonti tedavileri.',
             'telephone'   => config('brand.contact.phone_link'),
             'medicalSpecialty' => 'Dentistry',
-            'areaServed'  => ['İstanbul', 'Balıkesir'],
+            'areaServed'  => 'İstanbul',
             'sameAs'      => array_values(array_filter(array_merge(config('brand.social') ?? [], [config('brand.google_reviews_url')]))),
         ],
         [
@@ -63,7 +64,7 @@
             '@type' => 'WebPage',
             '@id'   => $home . '#sayfa',
             'url'   => $home,
-            'name'  => 'Invisalign Şeffaf Plak Tedavisi İstanbul & Balıkesir',
+            'name'  => 'Invisalign Şeffaf Plak Tedavisi İstanbul',
             'inLanguage' => 'tr-TR',
             'about' => ['@id' => $home . '#klinik'],
             'primaryImageOfPage' => asset('img/lp/invisalign/og.jpg'),

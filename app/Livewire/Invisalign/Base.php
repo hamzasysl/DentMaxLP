@@ -13,7 +13,7 @@ abstract class Base extends LocaleComponent
         $loc = app()->getLocale();
 
         $title = match ($loc) {
-            'tr' => 'Invisalign Tedavisi İstanbul & Balıkesir | Kahraman Ortodonti',
+            'tr' => 'Invisalign Şeffaf Plak Tedavisi İstanbul | Kahraman Ortodonti',
             default => 'Invisalign Clear Aligners in Turkey',
         };
 
@@ -33,7 +33,7 @@ abstract class Base extends LocaleComponent
             'seo' => [
                 'title' => $title,
                 'description' => match ($loc) {
-                    'tr' => 'Ortodonti uzmanı Yrd. Doç. Dr. Fatih Kahraman ile Invisalign şeffaf plak tedavisi. 3D planlama, tel yok. İstanbul ve Balıkesir’de ücretsiz muayene.',
+                    'tr' => 'Ortodonti uzmanı Yrd. Doç. Dr. Fatih Kahraman ile Invisalign şeffaf plak tedavisi. 3D planlama, tel yok. İstanbul Bakırköy’de ücretsiz muayene.',
                     default => 'Invisalign clear aligner treatment: straighten your teeth with nearly invisible aligners and a personalised plan.',
                 },
                 'og_image' => asset('img/lp/invisalign/og.jpg'),

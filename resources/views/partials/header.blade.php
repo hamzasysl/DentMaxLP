@@ -46,6 +46,10 @@
                     {{ $label }}
                 </a>
             @endforeach
+            @if(config('stories.publish'))
+                <a href="{{ route('stories.index') }}"
+                   class="relative py-2 transition hover:text-brand-700 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-gradient-to-r after:from-brand-700 after:to-[#c9973f] after:transition-transform hover:after:scale-x-100 {{ request()->routeIs('stories.*') ? 'text-brand-700 after:scale-x-100' : '' }}">Hasta Hikayeleri</a>
+            @endif
         </nav>
 
         {{-- Sağ: telefon + WhatsApp + CTA --}}

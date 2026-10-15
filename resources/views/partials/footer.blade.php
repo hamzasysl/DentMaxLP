@@ -74,6 +74,13 @@
                             </a>
                         </li>
                     @endforeach
+                    @if(config('stories.publish'))
+                        <li>
+                            <a href="{{ route('stories.index') }}" class="group inline-flex items-center gap-2 text-[14px] text-white/70 transition hover:text-white">
+                                <span class="h-px w-0 bg-[#e2b979] transition-all duration-300 group-hover:w-3"></span>Hasta hikayeleri
+                            </a>
+                        </li>
+                    @endif
                 </ul>
             </nav>
 

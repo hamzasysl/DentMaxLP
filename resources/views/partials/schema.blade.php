@@ -38,7 +38,7 @@
             'name'        => config('brand.name'),
             'url'         => $home,
             'logo'        => asset('img/apple-touch-icon.png'),
-            'image'       => asset('img/lp/invisalign/og.jpg'),
+            'image'       => asset('img/lp/invisalign/og.jpg') . '?v=' . @filemtime(public_path('img/lp/invisalign/og.jpg')),
             'description' => 'Ortodonti uzmanı ' . $doctor . ' ile İstanbul’da Invisalign şeffaf plak ve ortodonti tedavileri.',
             'telephone'   => config('brand.contact.phone_link'),
             'medicalSpecialty' => 'Dentistry',
@@ -67,7 +67,7 @@
             'name'  => 'Invisalign Şeffaf Plak Tedavisi İstanbul',
             'inLanguage' => 'tr-TR',
             'about' => ['@id' => $home . '#klinik'],
-            'primaryImageOfPage' => asset('img/lp/invisalign/og.jpg'),
+            'primaryImageOfPage' => asset('img/lp/invisalign/og.jpg') . '?v=' . @filemtime(public_path('img/lp/invisalign/og.jpg')),
         ],
     ];
 

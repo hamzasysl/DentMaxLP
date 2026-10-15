@@ -36,7 +36,7 @@ abstract class Base extends LocaleComponent
                     'tr' => 'Ortodonti uzmanı Yrd. Doç. Dr. Fatih Kahraman ile Invisalign şeffaf plak tedavisi. 3D planlama, tel yok. İstanbul Bakırköy’de ücretsiz muayene.',
                     default => 'Invisalign clear aligner treatment: straighten your teeth with nearly invisible aligners and a personalised plan.',
                 },
-                'og_image' => asset('img/lp/invisalign/og.jpg'),
+                'og_image' => asset('img/lp/invisalign/og.jpg') . '?v=' . @filemtime(public_path('img/lp/invisalign/og.jpg')),
                 'canonical' => url()->current(),
                 'robots' => 'index,follow',
             ],

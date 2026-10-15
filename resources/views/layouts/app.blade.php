@@ -72,9 +72,9 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     {{-- Favicon --}}
-    <link rel="icon" type="image/svg+xml" href="{{ asset('img/favicon.svg') }}">
-    <link rel="icon" href="{{ asset('favicon.ico') }}" sizes="32x32">
-    <link rel="apple-touch-icon" href="{{ asset('img/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/svg+xml" href="{{ asset('img/favicon.svg') . '?v=' . @filemtime(public_path('img/favicon.svg')) }}">
+    <link rel="icon" href="{{ asset('favicon.ico') . '?v=' . @filemtime(public_path('favicon.ico')) }}" sizes="32x32">
+    <link rel="apple-touch-icon" href="{{ asset('img/apple-touch-icon.png') . '?v=' . @filemtime(public_path('img/apple-touch-icon.png')) }}">
 
 
     {{-- (Opsiyonel) hreflang: URL zaten locale’li geliyorsa sadece locale segmentini değiştirerek üret --}}

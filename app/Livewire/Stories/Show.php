@@ -30,7 +30,7 @@ class Show extends Base
                 'description' => \Illuminate\Support\Str::limit($story['summary'], 155),
                 'canonical'   => route('stories.show', $story['slug']),
                 'robots'      => (config('stories.publish') && empty($story['example'])) ? 'index,follow' : 'noindex,nofollow',
-                'og_image'    => $story['photos']['after'] ? asset($story['photos']['after']) : asset('img/lp/invisalign/og.jpg'),
+                'og_image'    => $story['photos']['after'] ? asset($story['photos']['after']) : asset('img/lp/invisalign/og.jpg') . '?v=' . @filemtime(public_path('img/lp/invisalign/og.jpg')),
             ],
         ]);
 

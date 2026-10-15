@@ -79,7 +79,7 @@ return [
     /*  ------------- ÖZELLİKLER  ---------------- */
     'features' => [
         'exit_intent'    => true,  // sayfadan çıkarken randevu formu (Zürih düzeni)
-        'lucky_spin'     => true,  // şans çarkı (bölüm + modal + sağ alt buton)
+        'lucky_spin'     => (bool) env('FEATURE_LUCKY_SPIN', false), // şans çarkı (bölüm + modal + sağ alt buton) — şimdilik kapalı, kodlar duruyor
         // Atom şablonundan: şans çarkı + kuponlu WA popup + sağ FAB'lar
         // (TR'de sağlık reklamı mevzuatı nedeniyle kapalı)
         'legacy_widgets' => false,

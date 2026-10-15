@@ -300,7 +300,7 @@
     @php
         $benefitCols = array_chunk($benefits, 3);
     @endphp
-    <section id="tedavi-sureci" class="isolate relative overflow-clip bg-ivory py-16 lg:py-24">
+    <section id="tedavi-sureci" class="isolate relative overflow-clip {{ config('brand.features.lucky_spin') ? 'bg-ivory' : 'bg-white' }} py-16 lg:py-24">
         <x-mark-watermark class="-right-24 bottom-10 h-[400px]" />
         <div aria-hidden="true" class="pointer-events-none absolute inset-0 overflow-hidden">
             <div class="absolute top-1/2 left-1/2 h-[620px] w-[620px] -translate-x-1/2 -translate-y-1/3 rounded-full bg-brand-100/60 blur-3xl"></div>
@@ -368,6 +368,7 @@
         </div>
     </section>
 
+    @if(config('brand.features.lucky_spin'))
     {{-- ============ 15b. ŞANS ÇARKI ============ --}}
     <section id="cark" class="isolate relative overflow-clip bg-white py-16 lg:py-24">
         <x-mark-watermark class="-left-28 top-16 h-[420px]" />
@@ -375,6 +376,7 @@
             <livewire:ui.forms.lucky-spin />
         </div>
     </section>
+    @endif
 
     {{-- ============ 7b. YAKLAŞIM (Atom tarzı: solda metin, sağda kenardan eriyen fotoğraf + yuvarlak detay) ============ --}}
     <section id="surec" class="relative isolate overflow-hidden bg-ivory">

@@ -20,9 +20,9 @@
         <img src="{{ asset('img/hero-poster.jpg') }}" alt="" aria-hidden="true" class="absolute inset-0 -z-30 hidden h-full w-full object-cover motion-reduce:block">
 
         {{-- Perde: soldan vurgu rengi, sağa doğru açılır --}}
-        <div aria-hidden="true" class="absolute inset-0 -z-20 bg-[linear-gradient(90deg,rgb(26_19_15/.95)_0%,rgb(46_33_25/.86)_40%,rgb(22_19_17/.55)_78%,rgb(22_19_17/.42)_100%)]"></div>
+        <div aria-hidden="true" class="absolute inset-0 -z-20 bg-[linear-gradient(90deg,rgb(62_44_30/.9)_0%,rgb(84_61_42/.78)_40%,rgb(40_31_25/.45)_78%,rgb(40_31_25/.32)_100%)]"></div>
         {{-- Sinematik derinlik: üst/alt kararma --}}
-        <div aria-hidden="true" class="absolute inset-0 -z-20 bg-[linear-gradient(180deg,rgb(20_16_13/.45)_0%,transparent_28%,transparent_72%,rgb(20_16_13/.5)_100%)]"></div>
+        <div aria-hidden="true" class="absolute inset-0 -z-20 bg-[linear-gradient(180deg,rgb(30_23_18/.35)_0%,transparent_28%,transparent_72%,rgb(30_23_18/.4)_100%)]"></div>
         {{-- Soldan şeritler --}}
         <div aria-hidden="true" class="pointer-events-none absolute inset-y-0 -left-32 -z-10 w-[44%] -skew-x-12 bg-white/[0.035]"></div>
         <div aria-hidden="true" class="pointer-events-none absolute inset-y-0 left-[34%] -z-10 hidden w-px -skew-x-12 bg-gradient-to-b from-transparent via-white/25 to-transparent lg:block"></div>

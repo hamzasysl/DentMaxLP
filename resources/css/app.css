@@ -21,17 +21,17 @@
         --color-main-800: #24201d;
         --color-main-900: #161311;
 
-        /* BRAND — kahve (tek vurgu rengi): buton, çizgi, ikon. 900 neredeyse siyah koyu kahve */
-        --color-brand-50:  #f7f1ea;
-        --color-brand-100: #eee3d6;
-        --color-brand-200: #ddc8b1;
-        --color-brand-300: #c6a886;
-        --color-brand-400: #a98663;
-        --color-brand-500: #8b6a4d;
-        --color-brand-600: #73563d;
-        --color-brand-700: #5c4331;
-        --color-brand-800: #3f2e23;
-        --color-brand-900: #261c16;
+        /* BRAND — kahve (tek vurgu rengi): buton, çizgi, ikon. Açık ve sıcak tonlar */
+        --color-brand-50:  #faf6f1;
+        --color-brand-100: #f3eadf;
+        --color-brand-200: #e7d6c2;
+        --color-brand-300: #d4b897;
+        --color-brand-400: #bf9a72;
+        --color-brand-500: #a67e57;
+        --color-brand-600: #8c6745;
+        --color-brand-700: #765538;
+        --color-brand-800: #61452e;
+        --color-brand-900: #4e3826;
 
         /* Açık bölümler — bej */
         --color-ivory: #f5efe7;

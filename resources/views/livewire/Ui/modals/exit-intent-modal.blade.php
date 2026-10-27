@@ -48,7 +48,7 @@
                 <div class="px-5 pt-5 pb-5 sm:px-8 sm:pt-6 sm:pb-6">
                     <p class="mb-4 text-[13.5px] leading-relaxed text-main-500">Bilgilerinizi bırakın, en kısa sürede sizinle iletişime geçelim.</p>
                     <livewire:ui.forms.simple-form :key="'exit-intent-form'" layout="lead-compact" variant="light"
-                        :email-required="true" :require-consent="true" :with-topic="false" form-key="exit" />
+                        :email-required="true" :require-consent="true" :with-topic="false" form-key="exit" submit-label="Yerinizi Ayırtın" />
                 </div>
 
                 {{-- Hızlı kanallar --}}

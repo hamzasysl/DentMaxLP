@@ -80,7 +80,7 @@ return [
         'dm-title'  => 'Muayene gününe davetlisiniz',
         'dm-desc'   => 'Bilgilerinizi bırakın, sizi hemen arayalım.',
         'dm-topic-placeholder' => 'Seçiniz (isteğe bağlı)',
-        'dm-submit' => 'Randevu talep et',
+        'dm-submit' => 'Randevu talep edin',
         'dm-kvkk'   => ':link kapsamında kişisel verilerimin işlenmesini ve benimle iletişime geçilmesini kabul ediyorum.',
         'dm-kvkk-link' => 'KVKK Aydınlatma Metni',
         'dm-trust'  => 'Ortalama dönüş süresi: mesai saatlerinde 30 dk',

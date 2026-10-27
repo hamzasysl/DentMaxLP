@@ -72,6 +72,7 @@
                         <div>
                             <p class="text-[11px] font-medium uppercase tracking-[0.28em] text-brand-600">{{ __('forms.consultation.dm-kicker') }}</p>
                             <p class="mt-2 text-[22px] font-light leading-snug tracking-[-0.01em] text-main-900">{{ __('forms.consultation.dm-title') }}</p>
+                            <x-quota-note class="mt-2">Muayene günü kontenjanı sınırlıdır</x-quota-note>
                         </div>
                         <span class="hidden h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-50 text-brand-700 sm:inline-flex"><i class="fa-solid fa-tooth text-[15px]"></i></span>
                     </div>
@@ -266,6 +267,7 @@
                         Muayene gününe katılın
                         <i class="fa-solid fa-arrow-right text-[11px]"></i>
                     </button>
+                    <x-quota-note class="mt-3">Kontenjan dolmadan yerinizi alın</x-quota-note>
                 </div>
             </div>
         </div>
@@ -285,7 +287,8 @@
             <div data-reveal>
                 <p class="flex items-center gap-3 text-[11.5px] font-medium uppercase tracking-[0.32em] text-brand-200"><span class="h-px w-8 bg-brand-300/70"></span>3D tarama · Ortodonti muayenesi</p>
                 <h2 class="mt-4 text-[34px] leading-[1.1] tracking-[-0.02em] text-white lg:text-[42px]"><span class="block font-thin">Muayene Gününe</span><span class="block font-light whitespace-nowrap">Davetlisiniz</span></h2>
-                <p class="mt-3 text-[14px] leading-relaxed text-white/60">Kontenjanımız sınırlı. Ekibimiz sizi arayıp uygun saati birlikte belirler.</p>
+                <p class="mt-3 text-[14px] leading-relaxed text-white/60">Ekibimiz sizi arayıp uygun saati birlikte belirler.</p>
+                <x-quota-note tone="dark" class="mt-4">Muayene günü için kalan yerler sınırlı</x-quota-note>
                 <p class="mt-5 inline-flex items-center gap-2 text-[13px] text-[#e2b979]"><i class="fa-solid fa-lock text-[11px] text-[#d7a95f]"></i> Bilgileriniz gizli tutulur</p>
             </div>
 
@@ -414,6 +417,7 @@
                 <button data-reveal style="--d:220ms" type="button" onclick="Livewire.dispatch('open-book-consultation')" class="{{ $btnAccent }} mt-9">
                     Yerinizi Ayırtın <i class="fa-solid fa-arrow-right text-[11px]"></i>
                 </button>
+                <x-quota-note data-reveal style="--d:260ms" class="mt-3">Her muayene günü sınırlı sayıda kişiyle planlanır</x-quota-note>
             </div>
         </div>
 
@@ -521,6 +525,7 @@
                         <i class="fa-solid fa-diamond-turn-right text-[14px] text-[#e2b979]"></i> Yol Tarifi Al
                     </a>
                 </div>
+                <x-quota-note tone="dark" data-reveal style="--d:220ms" class="mt-4">İş çıkışı saatlerimizde kontenjan sınırlı</x-quota-note>
             </div>
         </div>
     </section>
@@ -601,6 +606,7 @@
                 <button data-reveal style="--d:360ms" type="button" onclick="Livewire.dispatch('open-book-consultation')" class="btn-accent mt-8 inline-flex cursor-pointer items-center justify-center gap-2 self-start rounded-xl px-5 py-3 text-[11.5px] font-semibold uppercase tracking-[0.16em]">
                     Yerinizi ayırtın <i class="fa-solid fa-arrow-right text-[10.5px]"></i>
                 </button>
+                <x-quota-note data-reveal style="--d:400ms" class="mt-3">Hekim görüşmesi için ayrılan yerler sınırlıdır</x-quota-note>
             </div>
         </div>
     </section>
@@ -736,9 +742,10 @@
                     <div data-reveal class="rounded-[22px] border border-main-200/80 bg-gradient-to-br from-white to-brand-50/60 p-6 sm:p-8 lg:sticky lg:top-24">
                         <p class="eyebrow">Randevu talebi</p>
                         <p class="mt-3 text-[26px] font-light leading-tight tracking-[-0.01em] text-main-900">Gülüşünüz için danışmanlık alın</p>
-                        <p class="mt-2 mb-6 text-[14.5px] text-main-500">Ekibimiz en kısa sürede sizinle iletişime geçecektir.</p>
+                        <p class="mt-2 text-[14.5px] text-main-500">Ekibimiz en kısa sürede sizinle iletişime geçecektir.</p>
+                        <x-quota-note class="mt-3 mb-6">Kontenjan sınırlı, talebinizi erkenden bırakın</x-quota-note>
                         <livewire:ui.forms.simple-form layout="lead" variant="light"
-                            :email-required="true" :require-consent="true" form-key="faq" />
+                            :email-required="true" :require-consent="true" form-key="faq" submit-label="Hemen iletişime geçin" />
                     </div>
                 </div>
             </div>

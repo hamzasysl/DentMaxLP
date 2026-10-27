@@ -36,6 +36,7 @@ class SimpleForm extends Component
     public string $topic = '';
     public bool $withTopic = true; // false: "ilgilendiğiniz durum" alanı gösterilmez (açılır pencereler)
     public string $formKey = '';
+    public ?string $submitLabel = null; // boşsa forms.consultation.dm-submit
 
     public function mount(
         ?string $variant = null,
@@ -46,6 +47,7 @@ class SimpleForm extends Component
         ?string $topic = null,
         ?string $formKey = null,
         ?bool $withTopic = null,
+        ?string $submitLabel = null,
     ): void
     {
         if ($variant)  $this->variant = $variant;
@@ -54,6 +56,7 @@ class SimpleForm extends Component
         if ($requireConsent !== null) $this->requireConsent = $requireConsent;
         if ($topic)    $this->topic   = $topic;
         if ($withTopic !== null) $this->withTopic = $withTopic;
+        if ($submitLabel) $this->submitLabel = $submitLabel;
         $this->formKey = $formKey ?: $this->getId();
 
         if ($pageTitle) {

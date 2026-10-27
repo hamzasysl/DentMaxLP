@@ -47,7 +47,7 @@
                 <div class="px-5 pt-5 pb-5 sm:px-8 sm:pt-6 sm:pb-6">
                     <p class="mb-4 text-[13.5px] leading-relaxed text-main-500">3D tarama ve ortodonti muayenesi için bilgilerinizi bırakın, size uygun saati birlikte belirleyelim.</p>
                     <livewire:ui.forms.simple-form :key="'simple-form-modal-' . md5($topic)" layout="lead-compact" variant="light"
-                        :email-required="true" :require-consent="true" :with-topic="false" :topic="$topic" form-key="modal" />
+                        :email-required="true" :require-consent="true" :with-topic="false" :topic="$topic" form-key="modal" submit-label="Yerinizi Ayırtın" />
                 </div>
 
                 {{-- Hızlı kanallar --}}

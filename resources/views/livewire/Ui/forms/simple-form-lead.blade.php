@@ -114,7 +114,7 @@
     @unless($band)
     <button type="submit" wire:loading.attr="disabled" wire:target="submit"
             class="group relative flex {{ $inline ? 'w-full shrink-0 lg:w-auto' : 'w-full' }} btn-accent cursor-pointer items-center justify-center gap-2 rounded-xl px-5 py-3 text-[12.5px] font-semibold uppercase tracking-[0.14em] whitespace-nowrap disabled:cursor-wait disabled:opacity-70">
-        <span wire:loading.remove wire:target="submit">{{ __('forms.consultation.dm-submit') }}</span>
+        <span wire:loading.remove wire:target="submit">{{ $submitLabel ?: __('forms.consultation.dm-submit') }}</span>
         <span wire:loading wire:target="submit">{{ __('forms.consultation.cta.submitting') }}</span>
         <i wire:loading.remove wire:target="submit" class="fa-solid fa-arrow-right text-[12px] transition group-hover:translate-x-0.5"></i>
     </button>

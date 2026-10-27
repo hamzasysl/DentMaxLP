@@ -155,7 +155,7 @@
 
                 <a data-reveal style="--d:240ms" href="{{ $whatsappUrl }}" target="_blank" rel="noopener"
                    class="btn-accent mt-8 inline-flex items-center gap-2 rounded-xl px-6 py-3.5 text-[12.5px] font-semibold uppercase tracking-[0.16em]">
-                    <i class="fa-brands fa-whatsapp text-[16px]"></i> WhatsApp bilgi al <i class="fa-solid fa-arrow-right text-[11px]"></i>
+                    <i class="fa-brands fa-whatsapp text-[16px]"></i> WhatsApp’tan bilgi alın <i class="fa-solid fa-arrow-right text-[11px]"></i>
                 </a>
             </div>
         </div>
@@ -439,7 +439,7 @@
                     İki yöntem de dişleri düzeltir; fark günlük hayatta ortaya çıkar. Size hangisinin uygun olduğuna muayenede birlikte karar veririz.
                 </p>
                 <button type="button" onclick="Livewire.dispatch('open-book-consultation')" class="{{ $btnDark }} mt-8">
-                    İletişime geç <i class="fa-solid fa-arrow-right text-[12px]"></i>
+                    İletişime geçin <i class="fa-solid fa-arrow-right text-[12px]"></i>
                 </button>
             </div>
 
@@ -522,7 +522,7 @@
                     </button>
                     <a href="{{ $blk['maps_link'] }}" target="_blank" rel="noopener"
                        class="inline-flex items-center gap-2.5 rounded-full border border-white/30 px-6 py-3.5 text-[15px] font-medium text-white transition hover:border-white/60 hover:bg-white/5">
-                        <i class="fa-solid fa-diamond-turn-right text-[14px] text-[#e2b979]"></i> Yol Tarifi Al
+                        <i class="fa-solid fa-diamond-turn-right text-[14px] text-[#e2b979]"></i> Yol Tarifi Alın
                     </a>
                 </div>
                 <x-quota-note tone="dark" data-reveal style="--d:220ms" class="mt-4">İş çıkışı saatlerimizde kontenjan sınırlı</x-quota-note>

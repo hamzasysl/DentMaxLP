@@ -84,7 +84,7 @@
             </div>
             <button type="submit" wire:loading.attr="disabled" wire:target="submit"
                     class="group flex h-10 w-full cursor-pointer items-center justify-center gap-2 rounded-lg bg-white px-7 text-[12.5px] font-semibold uppercase tracking-[0.16em] whitespace-nowrap text-brand-900 shadow-[0_14px_30px_-14px_rgba(0,0,0,.6)] transition hover:bg-brand-50 disabled:cursor-wait disabled:opacity-70 lg:w-auto">
-                <span wire:loading.remove wire:target="submit">Hemen gönder</span>
+                <span wire:loading.remove wire:target="submit">Hemen gönderin</span>
                 <span wire:loading wire:target="submit">{{ __('forms.consultation.cta.submitting') }}</span>
                 <i wire:loading.remove wire:target="submit" class="fa-solid fa-arrow-right text-[11px] transition group-hover:translate-x-0.5"></i>
             </button>

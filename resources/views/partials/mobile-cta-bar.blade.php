@@ -24,7 +24,7 @@
         <svg viewBox="0 0 100 100" class="wa-orbit absolute inset-0 h-full w-full" aria-hidden="true">
             <defs><path id="wa-orbit-path" d="M50,50 m-35,0 a35,35 0 1,1 70,0 a35,35 0 1,1 -70,0"/></defs>
             <text font-size="9" font-weight="700" letter-spacing="1.6" fill="rgba(255,255,255,.92)">
-                <textPath href="#wa-orbit-path" textLength="216" lengthAdjust="spacing">WHATSAPP • BİLGİ AL • </textPath>
+                <textPath href="#wa-orbit-path" textLength="216" lengthAdjust="spacing">WHATSAPP • BİLGİ ALIN • </textPath>
             </text>
         </svg>
         <span class="relative flex h-[30px] w-[30px] items-center justify-center rounded-full bg-white text-[#14a24f] shadow-[0_4px_10px_-4px_rgba(0,0,0,.35)]">

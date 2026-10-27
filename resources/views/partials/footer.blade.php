@@ -102,7 +102,7 @@
                     @if(!empty($b['maps_link']))
                         <a href="{{ $b['maps_link'] }}" target="_blank" rel="noopener"
                            class="mt-4 inline-flex items-center gap-2 text-[13px] text-white/60 transition hover:text-white">
-                            <i class="fa-solid fa-diamond-turn-right text-[12px] text-[#e2b979]"></i> Yol tarifi al
+                            <i class="fa-solid fa-diamond-turn-right text-[12px] text-[#e2b979]"></i> Yol tarifi alın
                         </a>
                     @endif
                 </div>

@@ -4,12 +4,12 @@
     $anchor   = fn (string $id) => $isBase ? "#{$id}" : "{$homeUrl}#{$id}";
 
     $nav = [
-        'vakalar'         => 'Invisalign',
-        'tedavi-sureci'   => 'Tedavi Süreci',
-        'hekim'           => 'Hakkımda',
-        'yorumlar'        => 'Yorumlar',
-        'sss'             => 'SSS',
-        'iletisim'        => 'İletişim',
+        'vakalar'          => 'Invisalign',
+        'tedavi-sureci'    => 'Tedavi Süreci',
+        'hasta-hikayeleri' => 'Hasta Hikayeleri', // ayrı sayfa (stories.index)
+        'hekim'            => 'Hakkımda',
+        'yorumlar'         => 'Yorumlar',
+        'sss'              => 'SSS',
     ];
 @endphp
 
@@ -17,7 +17,7 @@
             scrolled: false,
             active: '',
             spy() {
-                const ids = @js(array_keys($nav));
+                const ids = @js(array_values(array_diff(array_keys($nav), ['hasta-hikayeleri'])));
                 const io = new IntersectionObserver((entries) => {
                     entries.forEach(e => { if (e.isIntersecting) this.active = e.target.id; });
                 }, { rootMargin: '-40% 0px -55% 0px' });
@@ -40,16 +40,13 @@
         {{-- Masaüstü menü --}}
         <nav class="hidden items-center gap-7 text-[12px] font-normal uppercase tracking-[0.16em] text-main-700 xl:flex" aria-label="Sayfa içi">
             @foreach($nav as $id => $label)
-                <a href="{{ $anchor($id) }}" @if($label === 'Invisalign') lang="en" @endif
-                   :class="active === '{{ $id }}' ? 'text-brand-700 after:scale-x-100' : ''"
-                   class="relative py-2 transition hover:text-brand-700 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-gradient-to-r after:from-brand-700 after:to-[#c9973f] after:transition-transform hover:after:scale-x-100">
+                @php($isStories = $id === 'hasta-hikayeleri')
+                <a href="{{ $isStories ? route('stories.index') : $anchor($id) }}" @if($label === 'Invisalign') lang="en" @endif
+                   @unless($isStories) :class="active === '{{ $id }}' ? 'text-brand-700 after:scale-x-100' : ''" @endunless
+                   class="relative py-2 transition hover:text-brand-700 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-gradient-to-r after:from-brand-700 after:to-[#c9973f] after:transition-transform hover:after:scale-x-100 {{ $isStories && request()->routeIs('stories.*') ? 'text-brand-700 after:scale-x-100' : '' }}">
                     {{ $label }}
                 </a>
             @endforeach
-            @if(config('stories.publish'))
-                <a href="{{ route('stories.index') }}"
-                   class="relative py-2 transition hover:text-brand-700 after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-gradient-to-r after:from-brand-700 after:to-[#c9973f] after:transition-transform hover:after:scale-x-100 {{ request()->routeIs('stories.*') ? 'text-brand-700 after:scale-x-100' : '' }}">Hasta Hikayeleri</a>
-            @endif
         </nav>
 
         {{-- Sağ: telefon + WhatsApp + CTA --}}

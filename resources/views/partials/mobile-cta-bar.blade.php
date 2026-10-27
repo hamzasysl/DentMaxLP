@@ -11,7 +11,7 @@
         </a>
         <button type="button" onclick="Livewire.dispatch('open-book-consultation')"
                 class="btn-accent inline-flex h-12 cursor-pointer items-center justify-center gap-2 rounded-xl text-[14.5px] font-semibold">
-            Ücretsiz Muayene <i class="fa-solid fa-arrow-right text-[12px]"></i>
+            Yerinizi Ayırtın <i class="fa-solid fa-arrow-right text-[12px]"></i>
         </button>
     </div>
 </div>

@@ -67,7 +67,7 @@
             <button type="button" onclick="Livewire.dispatch('open-book-consultation')"
                     class="btn-accent relative inline-flex h-10 cursor-pointer items-center gap-2 overflow-hidden rounded-full px-4 text-[12.5px] font-semibold whitespace-nowrap shadow-[0_12px_26px_-10px_rgba(38,28,22,.75)] ring-2 ring-brand-100/80 transition hover:-translate-y-px sm:ml-1 sm:h-11 sm:px-6 sm:text-[14px] sm:ring-4">
                 <i class="fa-regular fa-calendar-check hidden text-[14px] text-[#ecd3a2] sm:inline"></i>
-                Ücretsiz Muayene
+                Yerinizi Ayırtın
             </button>
         </div>
     </div>

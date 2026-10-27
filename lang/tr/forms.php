@@ -53,7 +53,7 @@ return [
         'chose-your-gender-text' => 'Gülüş tasarımını size özel planlayabilmemiz için cinsiyetinizi seçin.',
         'chose-your-dream-text'  => 'Hayalinizdeki estetik diş modelini seçin.',
         'leave-your-details-text'=> 'İletişim bilgilerinizi bırakın — ekibimiz kısa süre içinde size ulaşacaktır.',
-        'free-dental-analysis'   => 'Ücretsiz Diş Analizi',
+        'free-dental-analysis'   => 'Ön Değerlendirme',
         'quick-check'            => 'Hızlı Değerlendirme',
         'privacy'                => 'Bilgileriniz gizli tutulur.',
         'option'                 => 'Seçiniz',
@@ -76,8 +76,8 @@ return [
         ],
 
         // Lead formu (layout=lead)
-        'dm-kicker' => 'Ücretsiz Muayene',
-        'dm-title'  => 'Randevunuzu Oluşturalım',
+        'dm-kicker' => '3D Tarama & Ortodonti',
+        'dm-title'  => 'Muayene gününe davetlisiniz',
         'dm-desc'   => 'Bilgilerinizi bırakın, sizi hemen arayalım.',
         'dm-topic-placeholder' => 'Seçiniz (isteğe bağlı)',
         'dm-submit' => 'Randevu talep et',

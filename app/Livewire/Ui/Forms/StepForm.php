@@ -10,7 +10,7 @@ use App\Traits\RedirectsToThankYou;
 use Livewire\Component;
 
 /**
- * Ücretsiz diş analizi — 3 adımlı form (Zürih LP'deki akış, Invisalign'a uyarlandı)
+ * Ön değerlendirme — 3 adımlı form (Zürih LP'deki akış, Invisalign'a uyarlandı)
  *   1) Kimin için   2) Gülüşteki durum (Invisalign ısırık ikonları)   3) İletişim + KVKK
  */
 class StepForm extends Component

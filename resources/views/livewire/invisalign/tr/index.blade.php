@@ -56,7 +56,7 @@
                 </div>
 
                 <dl data-reveal style="--d:340ms" class="mt-10 hidden max-w-lg grid-cols-3 gap-6 border-t border-white/10 pt-6 sm:grid">
-                    @foreach([['6–18', 'ay', 'Ortalama süre'], ['3D', '', 'Dijital planlama'], ['Ücretsiz', '', 'İlk muayene']] as [$v, $u, $l])
+                    @foreach([['6–18', 'ay', 'Ortalama süre'], ['3D', '', 'Dijital planlama'], ['Sınırlı', '', 'Kontenjan']] as [$v, $u, $l])
                         <div>
                             <dt class="text-[30px] font-extralight leading-none tracking-[-0.02em]">{{ $v }}<span class="ml-1 text-[13px] font-light text-white/60">{{ $u }}</span></dt>
                             <dd class="mt-2 text-[10.5px] uppercase tracking-[0.22em] text-white/50">{{ $l }}</dd>
@@ -263,7 +263,7 @@
                     <button type="button"
                             @click="Livewire.dispatch('open-book-consultation', { topic: current.title })"
                             class="{{ $btnAccent }} mt-6 cursor-pointer self-start">
-                        Ücretsiz değerlendirme
+                        Muayene gününe katılın
                         <i class="fa-solid fa-arrow-right text-[11px]"></i>
                     </button>
                 </div>
@@ -283,9 +283,9 @@
 
         <div class="mx-auto grid max-w-site gap-8 px-5 py-12 lg:grid-cols-[minmax(0,380px)_minmax(0,1fr)] lg:items-center lg:gap-12 lg:px-8 lg:py-14">
             <div data-reveal>
-                <p class="flex items-center gap-3 text-[11.5px] font-medium uppercase tracking-[0.32em] text-brand-200"><span class="h-px w-8 bg-brand-300/70"></span>Randevu talebi</p>
-                <h2 class="mt-4 text-[34px] leading-[1.1] tracking-[-0.02em] text-white lg:text-[42px]"><span class="block font-thin">Ücretsiz</span><span class="block font-light whitespace-nowrap">Değerlendirme Alın</span></h2>
-                <p class="mt-3 text-[14px] leading-relaxed text-white/60">Ekibimiz en kısa sürede sizinle iletişime geçer.</p>
+                <p class="flex items-center gap-3 text-[11.5px] font-medium uppercase tracking-[0.32em] text-brand-200"><span class="h-px w-8 bg-brand-300/70"></span>3D tarama · Ortodonti muayenesi</p>
+                <h2 class="mt-4 text-[34px] leading-[1.1] tracking-[-0.02em] text-white lg:text-[42px]"><span class="block font-thin">Muayene Gününe</span><span class="block font-light whitespace-nowrap">Davetlisiniz</span></h2>
+                <p class="mt-3 text-[14px] leading-relaxed text-white/60">Kontenjanımız sınırlı. Ekibimiz sizi arayıp uygun saati birlikte belirler.</p>
                 <p class="mt-5 inline-flex items-center gap-2 text-[13px] text-[#e2b979]"><i class="fa-solid fa-lock text-[11px] text-[#d7a95f]"></i> Bilgileriniz gizli tutulur</p>
             </div>
 
@@ -412,7 +412,7 @@
                 </p>
 
                 <button data-reveal style="--d:220ms" type="button" onclick="Livewire.dispatch('open-book-consultation')" class="{{ $btnAccent }} mt-9">
-                    Ücretsiz Muayene <i class="fa-solid fa-arrow-right text-[11px]"></i>
+                    Yerinizi Ayırtın <i class="fa-solid fa-arrow-right text-[11px]"></i>
                 </button>
             </div>
         </div>
@@ -471,9 +471,9 @@
                 <span class="inline-flex items-center gap-2.5 rounded-full border border-main-200/80 bg-white/80 px-4 py-1.5 text-[11.5px] font-semibold uppercase tracking-[0.22em] text-main-600 backdrop-blur">
                     <span class="h-1.5 w-1.5 rounded-full bg-[#c9973f]"></span> 3 adım · 30 saniye
                 </span>
-                <h2 class="mt-6 text-[clamp(32px,4vw,52px)] leading-[1.1] tracking-[-0.02em] font-light text-brand-900">Ücretsiz <span class="font-semibold">Diş Analizi</span></h2>
+                <h2 class="mt-6 text-[clamp(32px,4vw,52px)] leading-[1.1] tracking-[-0.02em] font-light text-brand-900">Online <span class="font-semibold">Ön Değerlendirme</span></h2>
                 <p class="mx-auto mt-5 max-w-xl text-[16px] leading-relaxed text-main-500">
-                    Birkaç soruyu yanıtlayın, sizi arayıp sorularınızı cevaplayalım ve uygun bir randevu saati belirleyelim.
+                    Birkaç soruyu yanıtlayın; sizi arayıp sorularınızı cevaplayalım ve 3D tarama ve muayene günü için uygun saati birlikte belirleyelim.
                 </p>
             </div>
 
@@ -514,7 +514,7 @@
                 <div data-reveal style="--d:180ms" class="mt-9 flex flex-wrap gap-3">
                     <button type="button" onclick="Livewire.dispatch('open-book-consultation')"
                             class="inline-flex cursor-pointer items-center gap-2.5 rounded-full bg-white px-6 py-3.5 text-[15px] font-medium text-brand-900 shadow-[0_14px_30px_-16px_rgba(0,0,0,.6)] transition hover:bg-brand-50">
-                        <i class="fa-regular fa-calendar-check text-[15px] text-brand-700"></i> Randevu Al
+                        <i class="fa-regular fa-calendar-check text-[15px] text-brand-700"></i> Yerinizi Ayırtın
                     </button>
                     <a href="{{ $blk['maps_link'] }}" target="_blank" rel="noopener"
                        class="inline-flex items-center gap-2.5 rounded-full border border-white/30 px-6 py-3.5 text-[15px] font-medium text-white transition hover:border-white/60 hover:bg-white/5">
@@ -599,7 +599,7 @@
                 </p>
 
                 <button data-reveal style="--d:360ms" type="button" onclick="Livewire.dispatch('open-book-consultation')" class="btn-accent mt-8 inline-flex cursor-pointer items-center justify-center gap-2 self-start rounded-xl px-5 py-3 text-[11.5px] font-semibold uppercase tracking-[0.16em]">
-                    Muayene randevusu al <i class="fa-solid fa-arrow-right text-[10.5px]"></i>
+                    Yerinizi ayırtın <i class="fa-solid fa-arrow-right text-[10.5px]"></i>
                 </button>
             </div>
         </div>

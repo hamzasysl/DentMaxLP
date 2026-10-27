@@ -33,7 +33,7 @@ abstract class Base extends LocaleComponent
             'seo' => [
                 'title' => $title,
                 'description' => match ($loc) {
-                    'tr' => 'Ortodonti uzmanı Yrd. Doç. Dr. Fatih Kahraman ile Invisalign şeffaf plak tedavisi. 3D planlama, tel yok. İstanbul Bakırköy’de ücretsiz muayene.',
+                    'tr' => 'Ortodonti uzmanı Yrd. Doç. Dr. Fatih Kahraman ile Invisalign şeffaf plak tedavisi. 3D planlama, tel yok. İstanbul Bakırköy’de 3D tarama ve ortodonti muayene günü.',
                     default => 'Invisalign clear aligner treatment: straighten your teeth with nearly invisible aligners and a personalised plan.',
                 },
                 'og_image' => asset('img/lp/invisalign/og.jpg') . '?v=' . @filemtime(public_path('img/lp/invisalign/og.jpg')),

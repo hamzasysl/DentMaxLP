@@ -25,10 +25,10 @@
                              class="h-16 w-16 shrink-0 rounded-2xl bg-white object-cover object-top ring-2 ring-white/30 sm:h-[72px] sm:w-[72px]">
                         <div>
                             <p class="flex items-center gap-2 text-[10.5px] font-semibold uppercase tracking-[0.22em] text-[#e2b979]">
-                                <span class="h-px w-5 bg-[#e2b979]"></span> Ücretsiz Muayene
+                                <span class="h-px w-5 bg-[#e2b979]"></span> Kontenjan Sınırlı
                             </p>
                             <h3 id="book-title" class="mt-1.5 text-[22px] leading-tight tracking-[-0.01em] sm:text-[26px]">
-                                <span class="font-light">Randevunuzu</span> <span class="font-semibold">Planlayalım</span>
+                                <span class="font-light">Muayene Gününe</span> <span class="font-semibold">Davetlisiniz</span>
                             </h3>
                             <p class="mt-1 text-[13px] text-white/65">{{ config('brand.doctor.name') }} · Ortodonti Uzmanı</p>
                         </div>
@@ -45,7 +45,7 @@
 
                 {{-- Form --}}
                 <div class="px-5 pt-5 pb-5 sm:px-8 sm:pt-6 sm:pb-6">
-                    <p class="mb-4 text-[13.5px] leading-relaxed text-main-500">Bilgilerinizi bırakın, en kısa sürede sizinle iletişime geçelim.</p>
+                    <p class="mb-4 text-[13.5px] leading-relaxed text-main-500">3D tarama ve ortodonti muayenesi için bilgilerinizi bırakın, size uygun saati birlikte belirleyelim.</p>
                     <livewire:ui.forms.simple-form :key="'simple-form-modal-' . md5($topic)" layout="lead-compact" variant="light"
                         :email-required="true" :require-consent="true" :with-topic="false" :topic="$topic" form-key="modal" />
                 </div>

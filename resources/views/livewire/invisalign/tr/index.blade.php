@@ -20,7 +20,7 @@
         <img src="{{ asset('img/hero-poster.jpg') }}" alt="" aria-hidden="true" class="absolute inset-0 -z-30 hidden h-full w-full object-cover motion-reduce:block">
 
         {{-- Perde: soldan vurgu rengi, sağa doğru açılır --}}
-        <div aria-hidden="true" class="absolute inset-0 -z-20 bg-[linear-gradient(90deg,rgb(0_61_36/.9)_0%,rgb(0_79_47/.78)_40%,rgb(0_38_23/.45)_78%,rgb(0_38_23/.32)_100%)]"></div>
+        <div aria-hidden="true" class="absolute inset-0 -z-20 bg-[linear-gradient(90deg,rgb(0_61_36/.93)_0%,rgb(0_79_47/.84)_40%,rgb(0_46_27/.76)_72%,rgb(0_38_23/.7)_100%)]"></div>
         {{-- Sinematik derinlik: üst/alt kararma --}}
         <div aria-hidden="true" class="absolute inset-0 -z-20 bg-[linear-gradient(180deg,rgb(0_30_18/.35)_0%,transparent_28%,transparent_72%,rgb(0_30_18/.4)_100%)]"></div>
         {{-- Soldan şeritler --}}
@@ -277,12 +277,12 @@
 
 
     {{-- ============ 6b. YATAY FORM BANDI ============ --}}
-    <section id="randevu-band" class="relative isolate overflow-hidden bg-brand-900">
-        {{-- Arka plan: klinik binası + lacivert perde --}}
+    <section id="randevu-band" class="relative isolate overflow-hidden bg-brand-950">
+        {{-- Arka plan: plak fotoğrafı + çok koyu yeşil perde --}}
         <img src="{{ asset('img/lp/invisalign/retainer-case.webp') }}" alt="" aria-hidden="true" loading="lazy"
              class="absolute inset-0 -z-20 h-full w-full object-cover object-[50%_45%]">
-        <div aria-hidden="true" class="absolute inset-0 -z-10 bg-gradient-to-r from-brand-900/[.97] via-brand-900/[.95] to-brand-900/[.93]"></div>
-        <div aria-hidden="true" class="absolute inset-0 -z-10 bg-[radial-gradient(60%_120%_at_0%_0%,rgba(13,111,74,.3),transparent_60%)]"></div>
+        <div aria-hidden="true" class="absolute inset-0 -z-10 bg-gradient-to-r from-brand-950/[.98] via-brand-950/[.97] to-brand-950/[.95]"></div>
+        <div aria-hidden="true" class="absolute inset-0 -z-10 bg-[radial-gradient(60%_120%_at_0%_0%,rgba(13,111,74,.18),transparent_60%)]"></div>
 
         <div class="mx-auto grid max-w-site gap-8 px-5 py-12 lg:grid-cols-[minmax(0,380px)_minmax(0,1fr)] lg:items-center lg:gap-12 lg:px-8 lg:py-14">
             <div data-reveal>
@@ -498,11 +498,11 @@
 
     {{-- ============ 7c. MESAİ SONRASI (İstanbul — pazartesi–cumartesi 19:30'a kadar) ============ --}}
     @php($blk = config('brand.branches.istanbul'))
-    <section id="mesai-sonrasi" class="relative isolate overflow-hidden bg-brand-900">
-        {{-- Sağ: klinik binası, soldan laciverte eriyerek --}}
+    <section id="mesai-sonrasi" class="relative isolate overflow-hidden bg-[#00301c]">
+        {{-- Sağ: tarama ekranı, soldan koyu yeşile eriyerek --}}
         <div aria-hidden="true" class="relative h-[240px] sm:h-[320px] lg:absolute lg:inset-y-0 lg:right-0 lg:h-auto lg:w-[55%]">
             <img src="{{ asset('img/lp/invisalign/scan-screen.webp') }}" alt="" loading="lazy" class="h-full w-full object-cover object-[50%_45%]">
-            <div class="absolute inset-0 bg-gradient-to-t from-brand-900 via-brand-900/40 to-brand-900/10 lg:bg-gradient-to-r lg:from-brand-900 lg:via-brand-900/55 lg:to-brand-900/15"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#00301c] via-[#00301c]/45 to-[#00301c]/15 lg:bg-gradient-to-r lg:from-[#00301c] lg:via-[#00301c]/60 lg:to-[#00301c]/20"></div>
         </div>
 
         <div class="relative mx-auto max-w-site px-5 pb-16 lg:px-8 lg:py-24">

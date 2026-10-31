@@ -9,32 +9,32 @@
         /* Sayfa konteyner genişliği (max-w-site) */
         --container-site: 1320px;
 
-        /* MAIN — sıcak nötr (koyu kahve-siyahtan beyaza). Sayfanın ana dili */
-        --color-main-50:  #f8f6f3;
-        --color-main-100: #f0ece7;
-        --color-main-200: #e2dcd5;
-        --color-main-300: #c7bfb6;
-        --color-main-400: #9b928a;
-        --color-main-500: #706861;
-        --color-main-600: #554f49;
-        --color-main-700: #3b3632;
-        --color-main-800: #24201d;
-        --color-main-900: #161311;
+        /* MAIN — hafif yeşil tonlu nötr (koyudan beyaza). Sayfanın ana dili */
+        --color-main-50:  #f6f7f5;
+        --color-main-100: #eceeeb;
+        --color-main-200: #dde0dc;
+        --color-main-300: #c2c6c1;
+        --color-main-400: #959a94;
+        --color-main-500: #6a6f69;
+        --color-main-600: #50544f;
+        --color-main-700: #373b37;
+        --color-main-800: #222522;
+        --color-main-900: #141614;
 
-        /* BRAND — kahve (tek vurgu rengi): buton, çizgi, ikon. Açık ve sıcak tonlar */
-        --color-brand-50:  #faf6f1;
-        --color-brand-100: #f3eadf;
-        --color-brand-200: #e7d6c2;
-        --color-brand-300: #d4b897;
-        --color-brand-400: #bf9a72;
-        --color-brand-500: #a67e57;
-        --color-brand-600: #8c6745;
-        --color-brand-700: #765538;
-        --color-brand-800: #61452e;
-        --color-brand-900: #4e3826;
+        /* BRAND — Rolex yeşili (#006039 = 700): buton, çizgi, ikon. Altın (#c9973f) ikincil vurgu */
+        --color-brand-50:  #e7eeeb;
+        --color-brand-100: #d2e2da;
+        --color-brand-200: #b3dbc7;
+        --color-brand-300: #82c1a3;
+        --color-brand-400: #4fa27c;
+        --color-brand-500: #23845c;
+        --color-brand-600: #0d6f4a;
+        --color-brand-700: #006039;
+        --color-brand-800: #004f2f;
+        --color-brand-900: #003d24;
 
         /* Açık bölümler — bej */
-        --color-ivory: #f5efe7;
+        --color-ivory: #e7eeeb;
     }
 }
 
@@ -104,12 +104,12 @@ html { overflow-x: clip; }
     left: -100%;
     width: 300%;
     background-image: linear-gradient(110deg,
-        rgba(92, 67, 49, 0) 0%,
-        rgba(92, 67, 49, .8) 16%,
+        rgba(0, 79, 47, 0) 0%,
+        rgba(0, 79, 47, .8) 16%,
         rgba(201, 151, 63, .6) 32%,
-        rgba(198, 168, 134, .4) 48%,
-        rgba(221, 200, 177, .2) 62%,
-        rgba(92, 67, 49, 0) 78%);
+        rgba(130, 193, 163, .4) 48%,
+        rgba(179, 219, 199, .2) 62%,
+        rgba(0, 79, 47, 0) 78%);
     animation: stepShimmer 4.6s linear infinite alternate;
     will-change: transform;
 }
@@ -117,7 +117,7 @@ html { overflow-x: clip; }
 .step-anim { animation: stepIn .55s cubic-bezier(.22, 1, .36, 1) both; }
 @keyframes stepIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 .bg-dots {
-    background-image: radial-gradient(rgba(38, 28, 22, .14) 1px, transparent 1px);
+    background-image: radial-gradient(rgba(0, 38, 23, .14) 1px, transparent 1px);
     background-size: 22px 22px;
     -webkit-mask-image: radial-gradient(ellipse 60% 55% at 50% 50%, #000 20%, transparent 75%);
             mask-image: radial-gradient(ellipse 60% 55% at 50% 50%, #000 20%, transparent 75%);
@@ -235,16 +235,17 @@ main strong, main b { font-weight: 500; }
 }
 
 /* Ana buton — vurgu rengi, yakın tonlar arası çok hafif geçiş (Atom'daki bakır buton gibi) */
+/* Rolex yeşili gradyan buton */
 .btn-accent {
-    background: var(--color-brand-900);
+    background: linear-gradient(135deg, #0b7a4b 0%, var(--color-brand-700) 48%, var(--color-brand-900) 100%);
     color: #fff;
-    box-shadow: 0 10px 22px -14px rgb(38 28 22 / .6);
-    transition: background-color .2s ease, transform .2s ease, box-shadow .2s ease;
+    box-shadow: 0 10px 22px -14px rgb(0 38 23 / .6), inset 0 1px 0 rgb(255 255 255 / .12);
+    transition: filter .2s ease, transform .2s ease, box-shadow .2s ease;
 }
 .btn-accent:hover {
-    background: var(--color-brand-800);
+    filter: brightness(1.1);
     transform: translateY(-1px);
-    box-shadow: 0 14px 28px -14px rgb(38 28 22 / .65);
+    box-shadow: 0 14px 28px -14px rgb(0 38 23 / .65), inset 0 1px 0 rgb(255 255 255 / .12);
 }
 
 /* Cam kart (koyu zeminde) */

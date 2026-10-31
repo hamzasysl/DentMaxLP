@@ -65,8 +65,11 @@ return [
     ],
 
     // TODO: Kahraman Ortodonti hesapları gelince doldurulacak (boşlar footer'da gizlenir)
-    // Google İşletme profili (yorumlar bölümündeki puan rozeti buraya bağlanır)
-    'google_reviews_url' => 'https://www.google.com/maps/place/Y.+Do%C3%A7ent+Dr.+Fatih+KAHRAMAN+%2F+DentMax+%C4%B0stanbul+Bak%C4%B1rk%C3%B6y+Ortodonti+Uzman%C4%B1+%2F+invisalign+-+Di%C5%9F+Teli+-+%C5%9Eeffaf+Plak+-+MARPE/@40.9910214,28.8316032,17z/data=!3m1!4b1!4m6!3m5!1s0x14cabb55bfffffff:0x308c4dec1658b472!8m2!3d40.9910214!4d28.8341781!16s%2Fg%2F11tjsbdvvn',
+    // Google İşletme profili: DentMax İstanbul Bakırköy (yorumlar sekmesi açık gelir).
+    // Puan ve yorum sayısı elle güncellenir (son kontrol: 31.10.2026)
+    'google_reviews_url'   => 'https://www.google.com/maps/place/DentMax+%C4%B0stanbul+Bak%C4%B1rk%C3%B6y+A%C4%9F%C4%B1z+ve+Di%C5%9F+Sa%C4%9Fl%C4%B1%C4%9F%C4%B1+Poliklini%C4%9Fi/@40.9909912,28.8341186,17z/data=!4m8!3m7!1s0x14cabd246ed9e805:0x939c07d2a717ed21!8m2!3d40.9909912!4d28.8341186!9m1!1b1!16s%2Fg%2F11g0j40y_k?hl=tr',
+    'google_rating'        => '5.0',
+    'google_reviews_count' => 524,
 
     'social' => [
         'instagram' => '',

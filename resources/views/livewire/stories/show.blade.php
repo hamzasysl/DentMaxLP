@@ -58,7 +58,7 @@
                 <div data-reveal style="--d:120ms">
                     <x-before-after :before="$story['photos']['before'] ?? null" :after="$story['photos']['after'] ?? null"
                                     :alt="$story['name'] . ' – ' . $story['condition_label']"
-                                    class="shadow-[0_40px_80px_-50px_rgba(38,28,22,.55)] ring-1 ring-main-200/70" />
+                                    class="shadow-[0_40px_80px_-50px_rgba(0,38,23,.55)] ring-1 ring-main-200/70" />
                     @if(!empty($story['finished']))
                         <p class="mt-3 text-right text-[12.5px] text-main-400">Tedavi tamamlandı: {{ $story['finished'] }}</p>
                     @endif

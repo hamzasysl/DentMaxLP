@@ -20,7 +20,7 @@
 <footer id="iletisim" class="relative isolate overflow-hidden bg-brand-900 text-white">
     <x-logo-mark class="pointer-events-none absolute -right-24 -bottom-16 -z-10 hidden h-[480px] w-auto select-none md:block"
                  style="--logo-ink: #ffffff; --logo-accent: #ffffff; opacity: .04;" />
-    <div aria-hidden="true" class="absolute inset-0 -z-10 bg-[radial-gradient(55%_80%_at_0%_0%,rgba(139,106,77,.35),transparent_65%),radial-gradient(45%_70%_at_100%_100%,rgba(198,168,134,.12),transparent_65%)]"></div>
+    <div aria-hidden="true" class="absolute inset-0 -z-10 bg-[radial-gradient(55%_80%_at_0%_0%,rgba(13,111,74,.35),transparent_65%),radial-gradient(45%_70%_at_100%_100%,rgba(130,193,163,.12),transparent_65%)]"></div>
 
     <div class="mx-auto max-w-site px-5 pt-16 pb-28 lg:px-8 lg:pt-20 lg:pb-8">
 
@@ -47,7 +47,7 @@
                     <a href="{{ config('brand.google_reviews_url') }}" target="_blank" rel="noopener"
                        class="mt-5 inline-flex items-center gap-2.5 text-[13px] text-white/60 transition hover:text-white">
                         <span class="flex gap-0.5 text-[11px] text-[#e2b979]">@for($s = 0; $s < 5; $s++)<i class="fa-solid fa-star"></i>@endfor</span>
-                        <span><span class="font-semibold text-white">5.0</span> Google puanı</span>
+                        <span><span class="font-semibold text-white">{{ config('brand.google_rating') }}</span> Google puanı · {{ config('brand.google_reviews_count') }} yorum</span>
                     </a>
                 @endif
 

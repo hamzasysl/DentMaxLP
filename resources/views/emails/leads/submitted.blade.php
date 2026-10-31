@@ -1,7 +1,7 @@
 {{-- Yeni başvuru maili — Kahraman Ortodonti. Mail programları için tablo düzeni + satır içi stil. --}}
 @php
-    $navy   = '#4e3826';
-    $navy2  = '#765538';
+    $navy   = '#003d24';
+    $navy2  = '#006039';
     $gold   = '#c9973f';
     $muted  = '#6b7280';
     $line   = '#e7e9ef';
@@ -46,7 +46,7 @@
                                             </td>
                                             <td style="vertical-align:middle;">
                                                 <div style="font-size:17px;font-weight:700;letter-spacing:4px;color:#ffffff;line-height:1;">KAHRAMAN</div>
-                                                <div style="margin-top:5px;font-size:9px;letter-spacing:3px;color:#e7d6c2;line-height:1;">ORTODONTİ</div>
+                                                <div style="margin-top:5px;font-size:9px;letter-spacing:3px;color:#b3dbc7;line-height:1;">ORTODONTİ</div>
                                             </td>
                                         </tr>
                                     </table>
@@ -61,7 +61,7 @@
 
                         <div style="margin-top:26px;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#e2b979;">Yeni başvuru</div>
                         <div style="margin-top:6px;font-size:26px;line-height:1.25;font-weight:600;color:#ffffff;">{{ $s->name }}</div>
-                        <div style="margin-top:6px;font-size:13px;color:#e7d6c2;">{{ $sentAt }}@if($s->source && $s->source !== 'unknown') · {{ $s->source }}@endif</div>
+                        <div style="margin-top:6px;font-size:13px;color:#b3dbc7;">{{ $sentAt }}@if($s->source && $s->source !== 'unknown') · {{ $s->source }}@endif</div>
                     </td>
                 </tr>
 

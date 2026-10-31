@@ -121,7 +121,7 @@
                 <div class="absolute top-8 -left-3 rounded-2xl bg-white/95 px-5 py-4 shadow-[0_24px_48px_-24px_rgba(0,38,23,.45)] ring-1 ring-main-100 backdrop-blur sm:-left-8">
                     <p class="mb-2 text-[11.5px] text-main-400">Geleneksel tel tedavisine göre</p>
                     <p class="text-[34px] font-extralight leading-none tracking-[-0.02em] text-main-900">%60<span class="ml-0.5 text-[13px] font-light text-brand-700">’a varan</span></p>
-                    <p class="mt-1.5 text-[11px] uppercase tracking-[0.2em] text-main-500">Daha kısa tedavi</p>
+                    <p class="mt-1.5 text-[11px] uppercase tracking-[0.2em] text-main-500">Kısa tedavi süresi</p>
                 </div>
             </div>
 

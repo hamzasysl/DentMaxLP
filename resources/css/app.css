@@ -22,7 +22,7 @@
         --color-main-900: #141614;
 
         /* BRAND — Rolex yeşili (#006039 = 700): buton, çizgi, ikon. Altın (#c9973f) ikincil vurgu */
-        --color-brand-50:  #e7eeeb;
+        --color-brand-50:  #efefef;
         --color-brand-100: #d2e2da;
         --color-brand-200: #b3dbc7;
         --color-brand-300: #82c1a3;
@@ -35,7 +35,7 @@
         --color-brand-950: #012116; /* çok koyu yeşil: form bandı */
 
         /* Açık bölümler — bej */
-        --color-ivory: #e7eeeb;
+        --color-ivory: #efefef;
     }
 }
 

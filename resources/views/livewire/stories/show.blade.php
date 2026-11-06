@@ -128,13 +128,13 @@
 
     {{-- ============ SÜREÇ + NOTLAR ============ --}}
     <section class="relative isolate overflow-clip bg-white py-16 lg:py-24">
-        @php($hasSide = !empty($story['plan']) || !empty($story['quote']) || !empty($story['doctor_note']))
+        @php($hasSide = !empty($story['plan']) || !empty($story['quote']))
         <div class="mx-auto grid gap-12 px-5 lg:gap-16 lg:px-8 {{ $hasSide ? 'max-w-site lg:grid-cols-[1.15fr_1fr]' : 'max-w-3xl' }}">
 
             {{-- Zaman çizelgesi --}}
             <div>
-                <p data-reveal class="eyebrow flex items-center gap-4"><span class="h-px w-10 bg-brand-600"></span>Tedavi süreci</p>
-                <h2 data-reveal class="mt-5 text-[clamp(28px,3vw,40px)] leading-[1.12] tracking-[-0.02em] text-main-900">
+                <p data-reveal class="eyebrow flex items-center gap-4 {{ $hasSide ? '' : 'justify-center' }}"><span class="h-px w-10 bg-brand-600"></span>Tedavi süreci</p>
+                <h2 data-reveal class="mt-5 text-[clamp(28px,3vw,40px)] leading-[1.12] tracking-[-0.02em] text-main-900 {{ $hasSide ? '' : 'text-center' }}">
                     <span class="font-thin">Adım Adım</span> <span class="font-light">Neler Yaşandı?</span>
                 </h2>
 
@@ -186,27 +186,13 @@
                     </figure>
                 @endif
 
-                @if(!empty($story['doctor_note']))
-                    <figure data-reveal style="--d:100ms" class="rounded-[24px] bg-ivory p-7 ring-1 ring-main-200/70 sm:p-8">
-                        <p class="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-600">Hekim değerlendirmesi</p>
-                        <blockquote class="mt-4 text-[16px] leading-relaxed text-main-700">{{ $story['doctor_note'] }}</blockquote>
-                        <figcaption class="mt-5 flex items-center gap-3">
-                            <img src="{{ asset('img/lp/invisalign/dr-fatih-kahraman.webp') }}" alt="{{ $doctor['name'] }}" loading="lazy"
-                                 class="h-11 w-11 rounded-full bg-white object-cover object-top ring-1 ring-main-200">
-                            <span class="leading-tight">
-                                <span class="block text-[14.5px] font-medium text-main-900">{{ $doctor['name'] }}</span>
-                                <span class="block text-[12.5px] text-main-500">Ortodonti Uzmanı</span>
-                            </span>
-                        </figcaption>
-                    </figure>
-                @endif
             </div>
             @endif
         </div>
     </section>
 
     {{-- ============ GALERİ (varsa) ============ --}}
-    @if(!empty($story['photos']['gallery']) || !empty($story['photos']['xray']))
+    @if(!empty($story['photos']['gallery']) || !empty($story['photos']['xray']) || !empty($story['doctor_note']))
         <section class="bg-ivory py-14 lg:py-20">
             <div class="mx-auto max-w-site px-5 lg:px-8">
                 <p class="eyebrow flex items-center gap-4"><span class="h-px w-10 bg-brand-600"></span>Klinik kayıtlar</p>
@@ -227,6 +213,22 @@
                         </figure>
                     @endforeach
                 </div>
+
+                {{-- Hekim notu --}}
+                @if(!empty($story['doctor_note']))
+                    <figure data-reveal class="mx-auto mt-12 max-w-3xl rounded-[24px] bg-white px-6 py-9 text-center ring-1 ring-main-200/70 sm:px-12 sm:py-11 lg:mt-16">
+                        <p class="flex items-center justify-center gap-3 text-[11.5px] font-semibold uppercase tracking-[0.26em] text-brand-600"><span class="h-px w-8 bg-[#c9973f]"></span>Hekim notu<span class="h-px w-8 bg-[#c9973f]"></span></p>
+                        <blockquote class="mt-5 text-[17px] leading-relaxed text-main-700">{{ $story['doctor_note'] }}</blockquote>
+                        <figcaption class="mt-7 inline-flex items-center gap-3 text-left">
+                            <img src="{{ asset('img/lp/invisalign/dr-fatih-kahraman.webp') }}" alt="{{ $doctor['name'] }}" loading="lazy"
+                                 class="h-12 w-12 rounded-full bg-white object-cover object-top ring-1 ring-main-200">
+                            <span class="leading-tight">
+                                <span class="block text-[15px] font-medium text-main-900">{{ $doctor['name'] }}</span>
+                                <span class="block text-[12.5px] text-main-500">Ortodonti Uzmanı</span>
+                            </span>
+                        </figcaption>
+                    </figure>
+                @endif
             </div>
         </section>
     @endif

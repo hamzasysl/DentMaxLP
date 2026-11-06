@@ -49,6 +49,8 @@ return [
             ],
             'video'     => ['src' => 'img/stories/dis-arasi-bosluk-plani/plan.mp4', 'poster' => 'img/stories/dis-arasi-bosluk-plani/plan-poster.jpg'],
             'model'     => 'img/stories/dis-arasi-bosluk-plani/model.bin',
+            // Yer tutucu: hekim notu gelince değiştirilecek
+            'doctor_note' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             'timeline' => [
                 ['when' => 'Eylül 2023',  'title' => 'Reçete gönderildi',       'text' => 'Tedavi reçetesi ve kayıtlar iletildi.'],
                 ['when' => 'Eylül 2023',  'title' => 'ClinCheck® planı onaylandı', 'text' => 'Dijital tedavi planı onaylandı.'],

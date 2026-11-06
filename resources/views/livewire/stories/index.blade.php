@@ -45,15 +45,15 @@
 
     {{-- ============ KARTLAR ============ --}}
     <section class="bg-white py-12 lg:py-16">
-        <div class="mx-auto grid max-w-site gap-5 px-5 sm:grid-cols-2 lg:px-8 {{ count($stories) >= 3 ? 'lg:grid-cols-3' : '' }}">
+        <div class="mx-auto grid gap-5 px-5 lg:px-8 {{ count($stories) === 1 ? 'max-w-2xl' : 'max-w-site sm:grid-cols-2' }} {{ count($stories) >= 3 ? 'lg:grid-cols-3' : '' }}">
             @foreach($stories as $story)
-                @php($after = $story['photos']['after'] ?? null)
+                @php($cover = $story['photos']['after'] ?? $story['photos']['cover'] ?? null)
                 <a x-show="filter === 'all' || filter === '{{ $story['condition'] }}'" x-transition.opacity
                    data-reveal style="--d: {{ $loop->index * 70 }}ms" href="{{ route('stories.show', $story['slug']) }}"
                    class="group flex flex-col overflow-hidden rounded-[24px] bg-white ring-1 ring-main-200/80 transition duration-300 hover:-translate-y-1 hover:shadow-[0_30px_60px_-36px_rgba(0,38,23,.5)] hover:ring-brand-200">
                     <div class="relative aspect-[4/3] overflow-hidden bg-ivory">
-                        @if($after)
-                            <img src="{{ asset($after) }}" alt="{{ $story['name'] }} – tedavi sonrası" loading="lazy" class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]">
+                        @if($cover)
+                            <img src="{{ asset($cover) }}" alt="{{ $story['name'] }} – {{ $story['condition_label'] }}" loading="lazy" class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]">
                         @else
                             <div aria-hidden="true" class="absolute inset-0 opacity-70 [background-image:radial-gradient(rgba(0,38,23,.08)_1px,transparent_1px)] [background-size:16px_16px]"></div>
                             <span aria-hidden="true" class="absolute inset-x-12 top-1/2 block aspect-[2.4] -translate-y-1/2 bg-current text-brand-600/70 transition duration-500 group-hover:scale-[1.04]" style="{{ $iconMask($story['condition']) }}"></span>
@@ -68,8 +68,12 @@
                         <p class="mt-2 line-clamp-2 text-[14.5px] leading-relaxed text-main-500">{{ $story['summary'] }}</p>
                         <div class="mt-auto flex items-center justify-between border-t border-main-100 pt-4 text-[13px]">
                             <span class="flex gap-4 text-main-600">
-                                <span><i class="fa-regular fa-clock mr-1.5 text-[11px] text-brand-600"></i>{{ $story['duration'] }}</span>
-                                @if(!empty($story['aligners']))<span><i class="fa-solid fa-layer-group mr-1.5 text-[11px] text-brand-600"></i>{{ $story['aligners'] }} plak</span>@endif
+                                @if(!empty($story['duration']))<span><i class="fa-regular fa-clock mr-1.5 text-[11px] text-brand-600"></i>{{ $story['duration'] }}</span>@endif
+                                @if(!empty($story['stages']))
+                                    <span><i class="fa-solid fa-layer-group mr-1.5 text-[11px] text-brand-600"></i>{{ $story['stages'] }} aşama</span>
+                                @elseif(!empty($story['aligners']))
+                                    <span><i class="fa-solid fa-layer-group mr-1.5 text-[11px] text-brand-600"></i>{{ $story['aligners'] }} plak</span>
+                                @endif
                             </span>
                             <span class="inline-flex items-center gap-1.5 font-medium text-brand-700">Hikayeyi oku <i class="fa-solid fa-arrow-right text-[10px] transition group-hover:translate-x-0.5"></i></span>
                         </div>

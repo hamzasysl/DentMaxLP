@@ -1,6 +1,18 @@
 import './bootstrap';
 import './react/mount.jsx';
 
+// Hasta hikayesi 3D modeli: yalnız sayfada varsa ve görünüme yaklaşınca yüklenir
+const caseViewer = document.querySelector('[data-case-viewer]');
+if (caseViewer) {
+    new IntersectionObserver(([entry], io) => {
+        if (!entry.isIntersecting) return;
+        io.disconnect();
+        import('./case-viewer.js')
+            .then(({ mountCaseViewer }) => mountCaseViewer(caseViewer))
+            .catch(() => caseViewer.classList.add('is-failed'));
+    }, { rootMargin: '300px' }).observe(caseViewer);
+}
+
 // ===== Premium efektler: kaydırınca belirme + mouse ışığı =====
 const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {

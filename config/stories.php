@@ -22,57 +22,41 @@ return [
     'items' => [
 
         [
-            'slug'      => 'ornek-caprasik-disler',
-            'example'   => true,
-            'name'      => 'E. K.',
-            'age'       => 27,
-            'condition' => 'caprasik',          // img/invisalign/bite/{condition}.svg ikonları
-            'condition_label' => 'Çapraşık dişler',
-            'duration'  => '11 ay',
-            'aligners'  => 24,
-            'location'  => 'İstanbul',
-            'finished'  => 'Eylül 2026',
-            'summary'   => 'Alt ve üst ön dişlerdeki çapraşıklık nedeniyle gülerken kendini rahat hissetmiyordu. Tel takmak istemediği için şeffaf plak tedavisini tercih etti.',
-            'photos'    => [
-                'before'  => null,   // 'img/stories/ornek-caprasik-disler/before.webp'
-                'after'   => null,
-                'gallery' => [],
-            ],
-            'timeline' => [
-                ['when' => '1. hafta', 'title' => 'Muayene ve 3D tarama', 'text' => 'Ağız içi tarama yapıldı, dişlerin hareketi dijital ortamda planlandı.'],
-                ['when' => '2. hafta', 'title' => 'İlk plaklar takıldı',  'text' => 'Plakların nasıl takılıp çıkarılacağı ve günlük kullanım anlatıldı.'],
-                ['when' => '5. ay',    'title' => 'Ara kontrol',          'text' => 'Dişlerin plana uygun ilerlediği görüldü, sonraki plak seti verildi.'],
-                ['when' => '11. ay',   'title' => 'Tedavi tamamlandı',    'text' => 'Sonucun korunması için pekiştirme plağı (retainer) teslim edildi.'],
-            ],
-            'quote'       => 'Örnek hasta yorumu: gerçek içerik geldiğinde hastanın kendi cümleleriyle değiştirilecek.',
-            'doctor_note' => 'Örnek hekim notu: tedavinin planlanması ve sonuç hakkında kısa bir değerlendirme buraya gelecek.',
-        ],
-
-        [
-            'slug'      => 'ornek-dis-arasi-bosluk',
-            'example'   => true,
-            'name'      => 'M. A.',
+            // Gerçek vaka: doğum tarihi ve hasta numarası kullanılmaz.
+            // Klinik plan ayrıntısı yazılmaz; yalnız hekimin onayladığı bilgiler eklenir.
+            'slug'      => 'dis-arasi-bosluk-plani',
+            'name'      => 'Melek Açıkgöz',
             'age'       => 34,
             'condition' => 'bosluk',
             'condition_label' => 'Dişler arası boşluk',
-            'duration'  => '7 ay',
-            'aligners'  => 16,
+            'title'     => ['Melek Hanım’ın', 'Invisalign Yolculuğu'],
+            'stages'    => 28,
+            'started'   => 'Eylül 2023',
             'location'  => 'İstanbul',
-            'finished'  => 'Temmuz 2026',
-            'summary'   => 'Ön dişleri arasındaki boşluklar fotoğraflarda belirgin görünüyordu. İş hayatı nedeniyle fark edilmeyen bir tedavi istiyordu.',
+            'summary'   => 'Melek Hanım’ın şeffaf plak tedavisi, ClinCheck® ile planlanan 28 aşamadan oluşuyor. Dijital planı, 3D modeli ve tedavi sürecini bu sayfada inceleyebilirsiniz.',
             'photos'    => [
                 'before'  => null,
                 'after'   => null,
-                'gallery' => [],
+                'cover'   => 'img/stories/dis-arasi-bosluk-plani/plan-poster.jpg',
+                'portrait' => 'img/stories/dis-arasi-bosluk-plani/portre.webp',
+                'xray'    => 'img/stories/dis-arasi-bosluk-plani/panoramik.webp',
+                'gallery' => [
+                    ['src' => 'img/stories/dis-arasi-bosluk-plani/yan-1.webp',    'label' => 'Yandan görünüm'],
+                    ['src' => 'img/stories/dis-arasi-bosluk-plani/yan-2.webp',    'label' => 'Diğer taraf'],
+                    ['src' => 'img/stories/dis-arasi-bosluk-plani/ust-cene.webp', 'label' => 'Üst çene'],
+                    ['src' => 'img/stories/dis-arasi-bosluk-plani/alt-cene.webp', 'label' => 'Alt çene'],
+                ],
             ],
+            'video'     => ['src' => 'img/stories/dis-arasi-bosluk-plani/plan.mp4', 'poster' => 'img/stories/dis-arasi-bosluk-plani/plan-poster.jpg'],
+            'model'     => 'img/stories/dis-arasi-bosluk-plani/model.bin',
             'timeline' => [
-                ['when' => '1. hafta', 'title' => 'Muayene ve 3D tarama', 'text' => 'Boşlukların kapanma süreci dijital olarak planlandı.'],
-                ['when' => '2. hafta', 'title' => 'İlk plaklar takıldı',  'text' => 'Günde 20–22 saat kullanım düzeni oluşturuldu.'],
-                ['when' => '4. ay',    'title' => 'Ara kontrol',          'text' => 'Ön bölgedeki boşlukların büyük kısmı kapandı.'],
-                ['when' => '7. ay',    'title' => 'Tedavi tamamlandı',    'text' => 'Pekiştirme plağıyla takip sürecine geçildi.'],
+                ['when' => 'Eylül 2023',  'title' => 'Reçete gönderildi',       'text' => 'Tedavi reçetesi ve kayıtlar iletildi.'],
+                ['when' => 'Eylül 2023',  'title' => 'ClinCheck® planı onaylandı', 'text' => 'Dijital tedavi planı onaylandı.'],
+                ['when' => 'Eylül 2023',  'title' => 'Plaklar gönderildi',      'text' => 'Onaylanan plana göre plaklar gönderildi.'],
+                ['when' => 'Ekim 2023',   'title' => 'Yeni reçete gönderildi',  'text' => 'Uyum Garantisi kapsamında yeni reçete ve kayıtlar iletildi.'],
+                ['when' => 'Kasım 2023',  'title' => 'ClinCheck® planı onaylandı', 'text' => 'Güncel dijital tedavi planı onaylandı.'],
+                ['when' => 'Aralık 2023', 'title' => 'Plaklar gönderildi',      'text' => 'Güncel plana göre plaklar gönderildi.'],
             ],
-            'quote'       => 'Örnek hasta yorumu: gerçek içerik geldiğinde hastanın kendi cümleleriyle değiştirilecek.',
-            'doctor_note' => 'Örnek hekim notu: tedavinin planlanması ve sonuç hakkında kısa bir değerlendirme buraya gelecek.',
         ],
 
     ],

@@ -310,3 +310,42 @@ main strong, main b { font-weight: 500; }
     [data-reveal] { opacity: 1; transform: none; filter: none; transition: none; }
     .line-grow { transform: none; }
 }
+
+/* Hasta hikayesi 3D modeli */
+.case-viewer.is-ready .case-viewer-wait { display: none; }
+.case-viewer.is-failed { display: none; }
+.case-viewer [data-stage] canvas { display: block; width: 100% !important; height: 100% !important; outline: none; }
+.case-range {
+    --p: 0%;
+    height: 22px;
+    appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+    cursor: pointer;
+}
+.case-range::-webkit-slider-runnable-track {
+    height: 4px;
+    border-radius: 99px;
+    background: linear-gradient(90deg, #c9973f var(--p), rgb(255 255 255 / .18) var(--p));
+}
+.case-range::-moz-range-track {
+    height: 4px;
+    border-radius: 99px;
+    background: linear-gradient(90deg, #c9973f var(--p), rgb(255 255 255 / .18) var(--p));
+}
+.case-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    margin-top: -9px;
+    border-radius: 50%;
+    border: 3px solid #c9973f;
+    background: #fff;
+}
+.case-range::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 3px solid #c9973f;
+    background: #fff;
+}

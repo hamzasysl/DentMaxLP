@@ -23,7 +23,4 @@ return [
         'landing_id' => env('LEAD_CRM_LANDING_ID'),
     ],
 
-    // Form gönderiminden sonra yeni sekmede WhatsApp açılsın mı?
-    'open_whatsapp_after_submit' => (bool) env('LEAD_OPEN_WHATSAPP', true),
-
 ];

@@ -207,7 +207,7 @@ class LuckySpin extends Component
     {
         if (! $this->spinDone || ! $this->payload) return null;
 
-        $this->openWhatsAppTab($this->waMessage);
+        $this->rememberWhatsAppMessage($this->waMessage);
 
         return $this->redirectToThankYou($this->payload);
     }

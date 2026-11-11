@@ -8,6 +8,7 @@ use Livewire\Component;
 class ThankYou extends Component
 {
     public array $thankYouData = [];
+    public string $waMessage = '';
 
     public function mount(): void
     {
@@ -19,6 +20,7 @@ class ThankYou extends Component
 
         // Formdan gelen veriler (yoksa boş)
         $this->thankYouData = session()->pull('thank_you_data', []);
+        $this->waMessage    = (string) session()->pull('thank_you_wa_message', '');
     }
 
     public function render()

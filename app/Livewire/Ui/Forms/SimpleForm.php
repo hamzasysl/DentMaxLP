@@ -124,8 +124,8 @@ class SimpleForm extends Component
             $this->resetValidation();
             $this->success = true;
 
-            // Yeni sekmede WhatsApp — karşılama + form bilgileri + kullanıcı mesajı
-            $this->openWhatsAppTab($waMessage);
+            // Teşekkür sayfasındaki WhatsApp butonu için: karşılama + form bilgileri + kullanıcı mesajı
+            $this->rememberWhatsAppMessage($waMessage);
 
             // ✅ tek yerden otomatik redirect
              return $this->redirectToThankYou($payload);

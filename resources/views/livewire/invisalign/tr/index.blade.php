@@ -268,7 +268,7 @@
                         Muayene gününe katılın
                         <i class="fa-solid fa-arrow-right text-[11px]"></i>
                     </button>
-                    <x-quota-note class="mt-3">Kontenjan dolmadan yerinizi alın</x-quota-note>
+                    <x-quota-note class="mt-3">Kontenjan dolmadan randevunuzu alın</x-quota-note>
                 </div>
             </div>
         </div>
@@ -416,7 +416,7 @@
                 </p>
 
                 <button data-reveal style="--d:220ms" type="button" onclick="Livewire.dispatch('open-book-consultation')" class="{{ $btnAccent }} mt-9">
-                    Yerinizi Ayırtın <i class="fa-solid fa-arrow-right text-[11px]"></i>
+                    Randevu Al <i class="fa-solid fa-arrow-right text-[11px]"></i>
                 </button>
                 <x-quota-note data-reveal style="--d:260ms" class="mt-3">Her muayene günü sınırlı sayıda kişiyle planlanır</x-quota-note>
             </div>
@@ -519,7 +519,7 @@
                 <div data-reveal style="--d:180ms" class="mt-9 flex flex-wrap gap-3">
                     <button type="button" onclick="Livewire.dispatch('open-book-consultation')"
                             class="inline-flex cursor-pointer items-center gap-2.5 rounded-full bg-white px-6 py-3.5 text-[15px] font-medium text-brand-900 shadow-[0_14px_30px_-16px_rgba(0,0,0,.6)] transition hover:bg-brand-50">
-                        <i class="fa-regular fa-calendar-check text-[15px] text-brand-700"></i> Yerinizi Ayırtın
+                        <i class="fa-regular fa-calendar-check text-[15px] text-brand-700"></i> Randevu Al
                     </button>
                     <a href="{{ $blk['maps_link'] }}" target="_blank" rel="noopener"
                        class="inline-flex items-center gap-2.5 rounded-full border border-white/30 px-6 py-3.5 text-[15px] font-medium text-white transition hover:border-white/60 hover:bg-white/5">
@@ -605,7 +605,7 @@
                 </p>
 
                 <button data-reveal style="--d:360ms" type="button" onclick="Livewire.dispatch('open-book-consultation')" class="btn-accent mt-8 inline-flex cursor-pointer items-center justify-center gap-2 self-start rounded-xl px-5 py-3 text-[11.5px] font-semibold uppercase tracking-[0.16em]">
-                    Yerinizi ayırtın <i class="fa-solid fa-arrow-right text-[10.5px]"></i>
+                    Randevu al <i class="fa-solid fa-arrow-right text-[10.5px]"></i>
                 </button>
                 <x-quota-note data-reveal style="--d:400ms" class="mt-3">Hekim görüşmesi için ayrılan yerler sınırlıdır</x-quota-note>
             </div>

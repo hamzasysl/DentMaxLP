@@ -21,21 +21,12 @@ trait RedirectsToThankYou
 
 
 
-    // Submit response'una eklenip Livewire redirect'inden ÖNCE çalışır:
-    // yeni sekmede WhatsApp konuşması açar. Boş mesajla düz konuşma başlatır.
-    protected function openWhatsAppTab(?string $message = null): void
+    // Form bilgileriyle hazırlanan WhatsApp mesajını saklar; teşekkür sayfasındaki
+    // WhatsApp butonu bu mesajla açılır. Gönderimden sonra otomatik WhatsApp açılmaz.
+    protected function rememberWhatsAppMessage(?string $message = null): void
     {
-        if (!config('lead.open_whatsapp_after_submit')) {
-            return;
-        }
-
-        $phone = preg_replace('/\D+/', '', config('brand.contact.whatsapp_link'));
-        $url = 'https://wa.me/' . $phone;
         $msg = is_string($message) ? trim($message) : '';
-        if ($msg !== '') {
-            $url .= '?text=' . rawurlencode($msg);
-        }
-        $this->js("window.open(" . json_encode($url) . ", '_blank', 'noopener');");
+        session()->put('thank_you_wa_message', $msg);
     }
 
     // Formdan gelen bilgilere göre zengin WhatsApp mesajı derler.

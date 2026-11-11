@@ -349,3 +349,15 @@ main strong, main b { font-weight: 500; }
     border: 3px solid #c9973f;
     background: #fff;
 }
+
+/* Mobil menü: bağlantılar sırayla kayarak gelir */
+.mobile-menu .mm-item {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity .45s ease, transform .6s cubic-bezier(.2,.7,.2,1);
+    transition-delay: calc(var(--i, 0) * 50ms + 120ms);
+}
+.mobile-menu[data-open="true"] .mm-item { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+    .mobile-menu .mm-item { transition: none; opacity: 1; transform: none; }
+}

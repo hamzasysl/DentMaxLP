@@ -1,5 +1,5 @@
 {{-- CTA yakınında "sınırlı kontenjan" vurgusu: yanıp sönen altın nokta + kısa metin.
-     Örn: <x-quota-note class="mt-3">Kontenjan dolmadan yerinizi alın</x-quota-note> · koyu zeminde tone="dark" --}}
+     Örn: <x-quota-note class="mt-3">Kontenjan dolmadan randevunuzu alın</x-quota-note> · koyu zeminde tone="dark" --}}
 @props(['tone' => 'light'])
 <p {{ $attributes->class([
     'flex items-center gap-2 text-[12.5px] font-medium',

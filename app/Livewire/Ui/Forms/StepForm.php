@@ -133,7 +133,7 @@ class StepForm extends Component
 
         $this->success = true;
 
-        $this->openWhatsAppTab($this->buildLeadWhatsAppMessage('step', [
+        $this->rememberWhatsAppMessage($this->buildLeadWhatsAppMessage('step', [
             'name'    => $this->name,
             'phone'   => $this->phone,
             'email'   => $this->email,

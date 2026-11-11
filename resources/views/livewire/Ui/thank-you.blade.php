@@ -33,6 +33,15 @@
                             {{ __('front.ty.successfully-message') }}
                         </p>
 
+                        {{-- WhatsApp: form bilgileriyle hazır mesaj (otomatik açılmaz, hasta isterse tıklar) --}}
+                        <div class="mt-8 w-full max-w-md rounded-2xl bg-[#25D366]/[0.07] p-5 text-left ring-1 ring-[#25D366]/25">
+                            <p class="text-[14.5px] leading-relaxed text-main-700">Daha hızlı bilgi almak için WhatsApp’tan da yazabilirsiniz. Form bilgileriniz mesaja otomatik eklenir.</p>
+                            <a href="{{ \App\Support\WhatsApp::url(message: $waMessage !== '' ? $waMessage : null) }}" target="_blank" rel="noopener"
+                               class="mt-4 inline-flex items-center gap-2.5 rounded-full bg-[#25D366] px-5 py-3 text-[14px] font-semibold text-white shadow-[0_12px_26px_-12px_rgba(18,140,74,.8)] transition hover:bg-[#1faa55]">
+                                <i class="fa-brands fa-whatsapp text-[18px]"></i> WhatsApp’tan yazın
+                            </a>
+                        </div>
+
                         {{-- GO HOME (pill button) --}}
                         @php
                             $target = '/';
@@ -41,7 +50,7 @@
                         <a
                             href="{{ url($target) }}"
                             wire:navigate
-                            class="mt-10 group inline-flex items-center gap-2 lg:gap-3 rounded-2xl
+                            class="mt-6 group inline-flex items-center gap-2 lg:gap-3 rounded-2xl
                                    border border-main-200
                                    bg-white/70 backdrop-blur
                                    px-3 lg:px-4 py-1.5 w-fit

@@ -234,6 +234,10 @@
 
 @once
     @push('scripts')
+        @if($adsConversion = config('brand.google_ads_conversion'))
+            {{-- Google Ads dönüşümü: form gönderildi --}}
+            <script>window.gtag && gtag('event', 'conversion', { send_to: @js($adsConversion) });</script>
+        @endif
 
         <script>
             (function () {

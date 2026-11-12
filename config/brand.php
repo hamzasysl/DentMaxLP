@@ -95,6 +95,10 @@ return [
     /*  ------------- TRACKING  ---------------- */
     'gtm_id' => env('GTM_ID'),
 
+    // Google Ads etiketi (gtag). Dönüşüm etiketi verilirse teşekkür sayfasında 'conversion' olayı gönderilir.
+    'google_ads_id'         => env('GOOGLE_ADS_ID', 'AW-802478007'),
+    'google_ads_conversion' => env('GOOGLE_ADS_CONVERSION'),   // örn. AW-802478007/AbCdEfGhIjk
+
     // WhatsApp popup'ında gösterilen kupon kodu
     'coupon_code' => 'KAHRAMAN-26',
 

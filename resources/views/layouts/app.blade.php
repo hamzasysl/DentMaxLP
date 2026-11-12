@@ -11,6 +11,17 @@
     <!-- End Google Tag Manager -->
     @endif
 
+    @if($adsId = config('brand.google_ads_id'))
+    <!-- Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ $adsId }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', @js($adsId));
+    </script>
+    @endif
+
     <meta charset="utf-8">
 
     @php

@@ -103,7 +103,7 @@
     </div>
 
     {{-- ============ 4. INVISALIGN NEDİR (fotoğraf mozaiği + metin) ============ --}}
-    <section class="isolate relative overflow-clip bg-ivory py-16 lg:py-24">
+    <section id="invisalign" class="isolate relative overflow-clip bg-ivory py-16 lg:py-24">
         <x-mark-watermark class="-right-28 top-12 h-[440px]" />
         <div class="mx-auto grid max-w-site items-center gap-12 px-5 lg:grid-cols-[1.05fr_.95fr] lg:gap-16 lg:px-8">
             {{-- Kompozisyon: büyük portre + üstüne binen ürün fotoğrafı + bilgi kartı --}}

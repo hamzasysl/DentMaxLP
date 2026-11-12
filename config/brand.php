@@ -95,9 +95,10 @@ return [
     /*  ------------- TRACKING  ---------------- */
     'gtm_id' => env('GTM_ID'),
 
-    // Google Ads etiketi (gtag). Dönüşüm etiketi verilirse teşekkür sayfasında 'conversion' olayı gönderilir.
-    'google_ads_id'         => env('GOOGLE_ADS_ID', 'AW-802478007'),
-    'google_ads_conversion' => env('GOOGLE_ADS_CONVERSION'),   // örn. AW-802478007/AbCdEfGhIjk
+    // Google Ads etiketi (gtag) ve dönüşümler
+    'google_ads_id'                  => env('GOOGLE_ADS_ID', 'AW-802478007'),
+    'google_ads_conversion'          => env('GOOGLE_ADS_CONVERSION', 'AW-802478007/7PjiCN7nmrcdELev0_4C'),          // LP - Ortodonti - Randevu formu (teşekkür sayfası)
+    'google_ads_whatsapp_conversion' => env('GOOGLE_ADS_WHATSAPP_CONVERSION', 'AW-802478007/wk7vCOHnmrcdELev0_4C'), // LP - Ortodonti - WhatsApp (tıklama)
 
     // WhatsApp popup'ında gösterilen kupon kodu
     'coupon_code' => 'KAHRAMAN-26',

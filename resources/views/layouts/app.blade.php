@@ -19,6 +19,13 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', @js($adsId));
+      @if($waConversion = config('brand.google_ads_whatsapp_conversion'))
+      // WhatsApp bağlantısına her tıklama bir dönüşüm (yeni sekmede açıldığı için sayfa ayrılmadan gönderilir)
+      document.addEventListener('click', function (e) {
+        var link = e.target.closest && e.target.closest('a[href*="wa.me/"], a[href*="api.whatsapp.com/"]');
+        if (link) gtag('event', 'conversion', { send_to: @js($waConversion) });
+      }, true);
+      @endif
     </script>
     @endif
 

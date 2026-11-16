@@ -59,6 +59,7 @@ class FormSubmission extends Model
         'ilgilenilen_durum' => 'İlgilenilen durum',
         'kimin_icin'        => 'Kimin için',
         'kvkk_onay'         => 'KVKK onayı',
+        'kvkk_aydinlatma'   => 'KVKK aydınlatma',
         'Award'             => 'Kazanılan hediye',
         'Source'            => 'Kaynak',
         'ref'               => 'Geldiği sayfa',

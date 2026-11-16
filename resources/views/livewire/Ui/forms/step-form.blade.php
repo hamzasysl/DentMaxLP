@@ -160,17 +160,15 @@
                                             @error('email') <div class="mt-2 text-sm text-red-600">{{ $message }}</div> @enderror
                                         </div>
 
-                                        <div class="sm:col-span-2">
-                                            <label class="flex cursor-pointer items-start gap-3 text-[12.5px] leading-relaxed text-main-500">
-                                                <input type="checkbox" wire:model="kvkk" class="mt-0.5 h-4 w-4 shrink-0 cursor-pointer rounded border-main-300 accent-brand-600">
-                                                <span>
-                                                    {!! __('forms.consultation.dm-kvkk', [
-                                                        'link' => '<a href="#kvkk" class="font-medium text-brand-700 underline underline-offset-2 hover:text-brand-800">' . e(__('forms.consultation.dm-kvkk-link')) . '</a>',
-                                                    ]) !!}
-                                                </span>
-                                            </label>
-                                            @error('kvkk') <div class="mt-2 text-sm text-red-600">{{ $message }}</div> @enderror
-                                        </div>
+                                        {{-- KVKK aydınlatma notu (onay kutusu yok) --}}
+                                        <p class="flex items-start gap-2 text-[12px] leading-relaxed text-main-400 sm:col-span-2">
+                                            <i class="fa-solid fa-lock mt-[3px] text-[10px] text-[#c9973f]"></i>
+                                            <span>
+                                                {!! __('forms.consultation.dm-kvkk', [
+                                                    'link' => '<a href="#kvkk" class="font-medium text-brand-700 underline underline-offset-2 hover:text-brand-800">' . e(__('forms.consultation.dm-kvkk-link')) . '</a>',
+                                                ]) !!}
+                                            </span>
+                                        </p>
 
                                         <div class="flex items-center gap-2 text-[12px] text-main-500 sm:col-span-2">
                                             <i class="fa-solid fa-lock text-[12px] text-[#c9973f]"></i> {{ __('forms.consultation.privacy') }}

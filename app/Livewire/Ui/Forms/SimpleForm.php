@@ -31,8 +31,7 @@ class SimpleForm extends Component
 
     // Lead formu: e-posta opsiyonel, KVKK onayı zorunlu, ilgilenilen durum (vaka) seçilebilir
     public bool $emailRequired = true;
-    public bool $requireConsent = false;
-    public bool $kvkk = false;
+    public bool $requireConsent = false; // true: KVKK aydınlatma notu gösterilir (onay kutusu yok)
     public string $topic = '';
     public bool $withTopic = true; // false: "ilgilendiğiniz durum" alanı gösterilmez (açılır pencereler)
     public string $formKey = '';
@@ -75,7 +74,6 @@ class SimpleForm extends Component
             'email'   => [$this->emailRequired ? 'required' : 'nullable', 'email:rfc,strict', 'max:120', new RealEmail()],
             'message' => ['nullable', 'string', 'max:1000'],
             'topic'   => ['nullable', 'string', 'max:120'],
-            'kvkk'    => $this->requireConsent ? ['accepted'] : [],
         ];
     }
 
@@ -87,7 +85,7 @@ class SimpleForm extends Component
             'email'   => $validated['email'] ?? null,
             'message' => $validated['message'] ?? null,
             'ilgilenilen_durum' => ($validated['topic'] ?? '') ?: null,
-            'kvkk_onay' => $this->requireConsent ? 'Evet' : null,
+            'kvkk_aydinlatma' => $this->requireConsent ? 'Gösterildi' : null,
             'ref'     => request()->headers->get('referer'),
         ];
     }
@@ -120,7 +118,7 @@ class SimpleForm extends Component
                 ]))),
             ]);
 
-            $this->reset(['name', 'phone', 'email', 'message', 'kvkk']);
+            $this->reset(['name', 'phone', 'email', 'message']);
             $this->resetValidation();
             $this->success = true;
 

@@ -81,7 +81,7 @@ return [
         'dm-desc'   => 'Bilgilerinizi bırakın, sizi hemen arayalım.',
         'dm-topic-placeholder' => 'Seçiniz (isteğe bağlı)',
         'dm-submit' => 'Randevu talep edin',
-        'dm-kvkk'   => ':link kapsamında kişisel verilerimin işlenmesini ve benimle iletişime geçilmesini kabul ediyorum.',
+        'dm-kvkk'   => 'Bilgileriniz :link kapsamında yalnızca başvurunuzla ilgili sizinle iletişime geçmek için kullanılır.',
         'dm-kvkk-link' => 'KVKK Aydınlatma Metni',
         'dm-trust'  => 'Ortalama dönüş süresi: mesai saatlerinde 30 dk',
 

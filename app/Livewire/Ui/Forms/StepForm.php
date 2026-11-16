@@ -31,7 +31,6 @@ class StepForm extends Component
     public string $name = '';
     public string $phone = '';
     public string $email = '';
-    public bool $kvkk = false;
 
     public const PATIENTS = [
         'self'  => 'Kendim için',
@@ -59,7 +58,6 @@ class StepForm extends Component
             'name'      => $this->step === 3 ? ['required', 'min:2', 'max:50', new RealName()] : [],
             'phone'     => $this->step === 3 ? ['required', 'string', new RealPhone()] : [],
             'email'     => $this->step === 3 ? ['required', 'email:rfc,strict', 'max:120', new RealEmail()] : [],
-            'kvkk'      => $this->step === 3 ? ['accepted'] : [],
         ];
     }
 
@@ -117,7 +115,7 @@ class StepForm extends Component
             'details' => array_filter([
                 'kimin_icin'        => self::PATIENTS[$this->patient] ?? null,
                 'ilgilenilen_durum' => self::CONDITIONS[$this->condition] ?? null,
-                'kvkk_onay'         => 'Evet',
+                'kvkk_aydinlatma'   => 'Gösterildi',
                 'ref'               => request()->headers->get('referer'),
             ]),
         ];

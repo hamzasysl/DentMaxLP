@@ -94,20 +94,16 @@
 
     <div class="{{ $inline ? 'flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between lg:gap-8' : ($compact ? 'space-y-3' : 'space-y-4') }}">
 
-    {{-- KVKK --}}
+    {{-- KVKK aydınlatma notu (onay kutusu yok: başvuru kişinin kendi talebi) --}}
     @if($requireConsent)
-        <div class="{{ $inline ? 'lg:max-w-xl' : '' }}">
-            <label class="flex cursor-pointer items-start gap-3 text-[12.5px] leading-relaxed {{ $band ? 'text-white/55' : 'text-main-500' }}">
-                <input type="checkbox" wire:model="kvkk"
-                       class="mt-0.5 h-4 w-4 shrink-0 cursor-pointer rounded border-main-300 accent-brand-600">
-                <span>
-                    {!! __('forms.consultation.dm-kvkk', [
-                        'link' => '<a href="#kvkk" class="font-medium ' . ($band ? 'text-white' : 'text-brand-700 hover:text-brand-800') . ' underline underline-offset-2">' . e(__('forms.consultation.dm-kvkk-link')) . '</a>',
-                    ]) !!}
-                </span>
-            </label>
-            @error('kvkk') <p class="{{ $err }}">{{ $message }}</p> @enderror
-        </div>
+        <p class="flex items-start gap-2 text-[12px] leading-relaxed {{ $inline ? 'lg:max-w-xl' : '' }} {{ $band ? 'text-white/50' : 'text-main-400' }}">
+            <i class="fa-solid fa-lock mt-[3px] text-[10px] {{ $band ? 'text-[#e2b979]' : 'text-[#c9973f]' }}"></i>
+            <span>
+                {!! __('forms.consultation.dm-kvkk', [
+                    'link' => '<a href="#kvkk" class="font-medium ' . ($band ? 'text-white/80' : 'text-brand-700 hover:text-brand-800') . ' underline underline-offset-2">' . e(__('forms.consultation.dm-kvkk-link')) . '</a>',
+                ]) !!}
+            </span>
+        </p>
     @endif
 
     {{-- Gönder --}}

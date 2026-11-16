@@ -58,10 +58,58 @@ class LeadPipeline
         // 5) Mail
         self::sendMail($submission->id);
 
-        // 6) Remote CRM push — landing_id tanımlıysa, kullanıcıyı bekletmeden terminating'de.
+        // 6) Webhook (Mezesoft) — adres tanımlıysa, kullanıcıyı bekletmeden terminating'de.
+        self::pushToWebhook($submission, $core, $details);
+
+        // 7) Remote CRM push — landing_id tanımlıysa, kullanıcıyı bekletmeden terminating'de.
         self::pushToCrm($core, $details);
 
         return $submission;
+    }
+
+    private static function pushToWebhook(FormSubmission $submission, array $core, array $details): void
+    {
+        $url = config('lead.webhook.url');
+
+        if (!$url) {
+            return;
+        }
+
+        $payload = [
+            'name'       => $core['name']    ?? null,
+            'phone'      => $core['phone']   ?? null,
+            'email'      => $core['email']   ?? null,
+            'message'    => $core['message'] ?? null,
+            'form_type'  => $submission->form_type,
+            'source'     => $submission->source,
+            'site'       => config('app.url'),
+            'page_url'   => request()->headers->get('referer'),
+            'city'       => $submission->geo_city,
+            'country'    => $submission->geo_country,
+            'submission_id' => $submission->id,
+            'submitted_at'  => $submission->created_at?->toIso8601String(),
+            'details'    => collect($details)
+                ->except(['message', 'mesaj'])
+                ->filter(fn ($v) => $v !== null && $v !== '')
+                ->toArray(),
+        ];
+
+        app()->terminating(function () use ($payload, $url) {
+            try {
+                $response = Http::acceptJson()
+                    ->asJson()
+                    ->connectTimeout(3)
+                    ->timeout(8)
+                    ->retry(2, 500, throw: false)
+                    ->post($url, $payload);
+
+                if ($response->failed()) {
+                    report(new \RuntimeException('Lead webhook HTTP ' . $response->status() . ': ' . mb_substr($response->body(), 0, 300)));
+                }
+            } catch (\Throwable $e) {
+                report($e);
+            }
+        });
     }
 
     private static function pushToCrm(array $core, array $details): void

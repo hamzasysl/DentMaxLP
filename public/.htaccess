@@ -5,6 +5,12 @@
 
     RewriteEngine On
 
+    # Tek adres: lp.kahramanortodonti.com.tr ve www.lp.* → https://lp.kahramanortodonti.com (SSL yenilemesi için .well-known hariç)
+    RewriteCond %{REQUEST_URI} !^/\.well-known/
+    RewriteCond %{HTTP_HOST} ^(www\.)?lp\.kahramanortodonti\.com\.tr$ [NC,OR]
+    RewriteCond %{HTTP_HOST} ^www\.lp\.kahramanortodonti\.com$ [NC]
+    RewriteRule ^ https://lp.kahramanortodonti.com%{REQUEST_URI} [R=301,L]
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
